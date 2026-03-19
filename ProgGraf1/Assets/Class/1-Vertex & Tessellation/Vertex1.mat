@@ -25,10 +25,22 @@ Material:
     m_TexEnvs:
     - _Height:
         m_Texture: {fileID: 2800000, guid: 9789d23040cb1fb45ad60392430c3c15, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _Height1:
+        m_Texture: {fileID: 2800000, guid: 9f8d9d9e60979574ea22974d2e2c08d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture0:
         m_Texture: {fileID: 2800000, guid: 662d72b6ec210cf4cbeec2b4d3cb8b2a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture1:
+        m_Texture: {fileID: 2800000, guid: b97db8acddac10d4c867939fcd38e487, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2:
+        m_Texture: {fileID: 2800000, guid: 9f8d9d9e60979574ea22974d2e2c08d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -37,7 +49,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _BrickHeight: 0.54
+    - _SandHeight: 1.47
     - __dirty: 0
-    - _maxHeight: 1.2
+    - _clampHeight: 1
+    - _maxHeight: 3.1
+    - _maxHeight1: 3.1
     m_Colors: []
   m_BuildTextureStacks: []
