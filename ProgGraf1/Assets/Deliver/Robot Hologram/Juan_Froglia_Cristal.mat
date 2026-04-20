@@ -23,7 +23,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _CenterScale: 0.3
-    - _Light: 1
+    - _Light: 1.03
     - _Power: 1.15
     - _Power1: 0
     - _Power2: 0
