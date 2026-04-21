@@ -4,10 +4,10 @@ Shader "Juan_Froglia_Cristal"
 {
 	Properties
 	{
-		_Scale("Scale", Float) = 0
-		_Power("Power", Float) = 0
-		_Light("Light", Float) = 0
-		_CenterScale("CenterScale", Float) = 0
+		_Scale("Scale", Range( 0 , 2)) = 0
+		_Power("Power", Range( 1 , 4)) = 1
+		_Light("Light", Range( 0 , 10)) = 0
+		_CenterScale("CenterScale", Range( 0 , 0.5)) = 0
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
 
@@ -122,14 +122,14 @@ Shader "Juan_Froglia_Cristal"
 }
 /*ASEBEGIN
 Version=18900
-307;73;1157;535;1147.525;272.9931;1.9;True;True
+219;73;1245;535;1436.79;147.5786;1.455771;True;True
 Node;AmplifyShaderEditor.ColorNode;4;-776.7272,-117.1213;Inherit;False;Constant;_Color0;Color 0;2;0;Create;True;0;0;0;False;0;False;0,0.0364639,0.7169812,0.1137255;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;7;-437.7886,134.5053;Inherit;False;Property;_Light;Light;2;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;2;-908.1118,254.5064;Inherit;False;Property;_Scale;Scale;0;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;3;-910.056,340.6802;Inherit;False;Property;_Power;Power;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;2;-998.2612,255.6622;Inherit;False;Property;_Scale;Scale;0;0;Create;True;0;0;0;False;0;False;0;0;0;2;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;7;-613.465,131.038;Inherit;False;Property;_Light;Light;2;0;Create;True;0;0;0;False;0;False;0;0;0;10;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;3;-910.056,340.6802;Inherit;False;Property;_Power;Power;1;0;Create;True;0;0;0;False;0;False;1;0;1;4;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-301.7167,103.7409;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.FresnelNode;1;-716.8823,242.3342;Inherit;False;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;20;-551.6017,420.9254;Inherit;False;Property;_CenterScale;CenterScale;3;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.FresnelNode;1;-627.8887,223.8418;Inherit;False;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;20;-551.6017,420.9254;Inherit;False;Property;_CenterScale;CenterScale;3;0;Create;True;0;0;0;False;0;False;0;0;0;0.5;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;6;-439.1532,-73.56669;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SaturateNode;9;-145.3225,114.4802;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.ClampOpNode;22;-307.501,251.4749;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0
@@ -147,4 +147,4 @@ WireConnection;0;0;6;0
 WireConnection;0;2;9;0
 WireConnection;0;9;22;0
 ASEEND*/
-//CHKSM=F5FD0A32D5390D3618BC8C1B8AFABFDA90610A36
+//CHKSM=44D241D7BF2112845E3422D267D48A3137A47883
