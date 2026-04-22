@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Tomas_Perez_HighQualityOcean 1
+  m_Shader: {fileID: 4800000, guid: 5b3e053696287e6439eae3e6e51702ca, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NormalMap:
+        m_Texture: {fileID: 11700000, guid: 8412d1f8d5b7c084081a79e0303b88f5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normals_3D:
+        m_Texture: {fileID: 11700000, guid: 8412d1f8d5b7c084081a79e0303b88f5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normals_3D1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: d01457b88b1c5174ea4235d140b5fab8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 11700000, guid: 8412d1f8d5b7c084081a79e0303b88f5, type: 2}
+        m_Scale: {x: 11.53, y: 5.65}
+        m_Offset: {x: 0.06, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: 49e4338a2d4c7d14a9fe5655a2749b56, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _tex3coord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Bias: 1
+    - _DEAPTH: 12.94
+    - _DIVIDEEE: 2
+    - _DeapthFoamTileEdge: 1.15
+    - _DepthFoamTileWave: 2
+    - _DepthMaskIntensity: -0.51
+    - _DepthMultiply: 0.399
+    - _DepthPower: 2
+    - _Distance: 6.51
+    - _Dividedepth: 10.52
+    - _DividedepthWave: 20.1
+    - _EdgeLength: 2
+    - _Float0: -0.32
+    - _Float2: 0.01
+    - _Inverter: 1
+    - _Multiply: 0.328
+    - _NoiseSpeed: 0.1
+    - _NormalPower: 0.54
+    - _NormalPower1: 1
+    - _NormalSpeed: 0
+    - _NormalSpeedArray: 0.284
+    - _NormalSpeedArray1: 0.535
+    - _NormalTile: 0.04
+    - _PannerNormalSpeed1: 0.05
+    - _Power: 0.38
+    - _Refractamount: 0.143
+    - _RefractionDepth: 11.1
+    - _Smoothnes: 1
+    - _TessMax: 25
+    - _TessMaxDisp: 25
+    - _TessMin: 10
+    - _TessValue: 15
+    - _Tessellation: 100
+    - _Tiling: 0.0181
+    - _Tiling1: 0.0647
+    - _WaveCount: -0.646
+    - _WaveCount1: 0
+    - _WaveCount2: -0.27
+    - _WaveHeight: 4.08
+    - _WaveIntensity: -0.32
+    - _WaveSpeed: 1.14
+    - _WaveSpeed1: 0
+    - _WaveTile: 0.0355
+    - __dirty: 0
+    - _aaaaaaaaaaaaaa: 9.67
+    - _depthfoamtile: 2.72
+    - _depthfoamtileWave: 0.4
+    m_Colors:
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _Tilling: {r: 10, g: 4, b: 0, a: 0}
+    - _TopColor: {r: 0.8066038, g: 0.8710692, b: 1, a: 1}
+    - _Vector1: {r: 1.82, g: 0.1, b: 0, a: 0}
+    - _Wave2Mult: {r: 0.53, g: 0.2, b: 0, a: 0}
+    - _WaveStretch: {r: 45.34, g: 4.3, b: 0, a: 0}
+    - _waterColor: {r: 0, g: 0.27748403, b: 0.50980395, a: 1}
+  m_BuildTextureStacks: []
