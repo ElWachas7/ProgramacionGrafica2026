@@ -34,9 +34,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _RefPlane: 2.55
+    - _RefPlane: 1.82
     - __dirty: 0
-    - _scale: 0.05
+    - _scale: 0.103
     m_Colors:
     - _Color0: {r: 1, g: 0.5287269, b: 0, a: 0}
   m_BuildTextureStacks: []
