@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Marker_Material
+  m_Name: Julieta_Ipar_Marker_Material
   m_Shader: {fileID: 4800000, guid: 463206e660a241342b44e31496bfc45e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 7996905d1337e5c47b5cb14e1f833655, type: 3}
+        m_Texture: {fileID: 2800000, guid: f1b9dd2966116894abcf4135cf67e6f7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture1:
@@ -38,8 +38,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Max: -0.18
+    - _Min: 0.57
+    - _PowerValue: 0.57
     - _TimeSpeed: 4.81
+    - _Value: 0.82
     - __dirty: 0
     m_Colors:
     - _Anchor: {r: 5.57, g: 5.69, b: 0, a: 0}
+    - _Color0: {r: 1, g: 0.88631994, b: 0.2235294, a: 0}
+    - _MarkerColor: {r: 0.9555477, g: 1, b: 0.2235294, a: 0}
   m_BuildTextureStacks: []
