@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _STONE_Normal:
-        m_Texture: {fileID: 2800000, guid: ce1e9fd8de252fd40831175b7b4722d5, type: 3}
+        m_Texture: {fileID: 2800000, guid: c2337c830b1ab1a4f85c7c082a427cba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Sand:
@@ -68,6 +68,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 8c4a7fca2884fab419769ccc0355c0c1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _tex3coord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -75,10 +79,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _EdgeLength: 15
-    - _IslandHeight: 65.4
+    - _Float0: 5.18
+    - _IslandHeight: 50
     - _IslandTile: 0.3
+    - _NormalIntensity: 1
+    - _NormalIntensity1: 1
     - _NormalSpeedArray1: 0.4
-    - _StoneHeight: 10.95
+    - _StoneHeight: 8
     - _Tiling: 1
     - _Tiling1: 0.1
     - _WaveTile1: 0.05

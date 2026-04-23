@@ -71,7 +71,7 @@ Material:
     - _Inverter: 1
     - _Multiply: 0.328
     - _NoiseSpeed: 0.1
-    - _NormalPower: 0.368
+    - _NormalPower: 1
     - _NormalPower1: 1
     - _NormalSpeed: 0
     - _NormalSpeedArray: 0.284
