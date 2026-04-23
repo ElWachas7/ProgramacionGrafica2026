@@ -58,8 +58,8 @@ Material:
     - _DEAPTH: 12.94
     - _DIVIDEEE: 2
     - _DeapthFoamTileEdge: 1.15
-    - _DepthFoamTileWave: 2
-    - _DepthMaskIntensity: -0.51
+    - _DepthFoamTileWave: 4
+    - _DepthMaskIntensity: 0.041
     - _DepthMultiply: 0.399
     - _DepthPower: 2
     - _Distance: 6.51
@@ -71,7 +71,7 @@ Material:
     - _Inverter: 1
     - _Multiply: 0.328
     - _NoiseSpeed: 0.1
-    - _NormalPower: 0.54
+    - _NormalPower: 0.368
     - _NormalPower1: 1
     - _NormalSpeed: 0
     - _NormalSpeedArray: 0.284
@@ -80,7 +80,7 @@ Material:
     - _PannerNormalSpeed1: 0.05
     - _Power: 0.38
     - _Refractamount: 0.143
-    - _RefractionDepth: 11.1
+    - _RefractionDepth: 30.5
     - _Smoothnes: 1
     - _TessMax: 25
     - _TessMaxDisp: 25
@@ -92,7 +92,7 @@ Material:
     - _WaveCount: -0.646
     - _WaveCount1: 0
     - _WaveCount2: -0.27
-    - _WaveHeight: 4.08
+    - _WaveHeight: 3.41
     - _WaveIntensity: -0.32
     - _WaveSpeed: 1.14
     - _WaveSpeed1: 0
