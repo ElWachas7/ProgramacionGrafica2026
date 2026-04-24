@@ -71,10 +71,10 @@ Material:
     - _Inverter: 1
     - _Multiply: 0.328
     - _NoiseSpeed: 0.1
-    - _NormalPower: 1
+    - _NormalPower: 0
     - _NormalPower1: 1
     - _NormalSpeed: 0
-    - _NormalSpeedArray: 0.284
+    - _NormalSpeedArray: 0.195
     - _NormalSpeedArray1: 0.535
     - _NormalTile: 0.04
     - _PannerNormalSpeed1: 0.05
@@ -96,7 +96,7 @@ Material:
     - _WaveIntensity: -0.32
     - _WaveSpeed: 1.14
     - _WaveSpeed1: 0
-    - _WaveTile: 0.0355
+    - _WaveTile: 0.05
     - __dirty: 0
     - _aaaaaaaaaaaaaa: 9.67
     - _depthfoamtile: 2.72

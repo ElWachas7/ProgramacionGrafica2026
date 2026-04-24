@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ParallaxOcclusion
-  m_Shader: {fileID: 4800000, guid: 157f77224d476414da771d9381a8c7a6, type: 3}
+  m_Name: Francisco_Geddes_ParedRoom
+  m_Shader: {fileID: 4800000, guid: d0e5d7c68bcf98046852c0d858cca2fd, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -20,16 +20,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 61fdb89fb6b5fda479e8484e3846e84f, type: 3}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Normal:
-        m_Texture: {fileID: 2800000, guid: 0ab89e017b9db5f4fa4ccdf7537c2dba, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture0:
-        m_Texture: {fileID: 2800000, guid: 61fdb89fb6b5fda479e8484e3846e84f, type: 3}
+    - _Wall:
+        m_Texture: {fileID: 2800000, guid: 792d0f119fdb13f4b91674c99f744692, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -38,10 +34,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float0: 0.5
-    - _NormalScale: 1
-    - _ReflPlane: 0.27
-    - _Scale: 0.03
     - __dirty: 0
-    m_Colors: []
+    - _offset: 1.77
+    - _tiling: 0.37
+    m_Colors:
+    - _Tiling: {r: 0, g: 0, b: 0, a: 0}
+    - _offset: {r: 0.09, g: 0.08, b: 0, a: 0}
   m_BuildTextureStacks: []

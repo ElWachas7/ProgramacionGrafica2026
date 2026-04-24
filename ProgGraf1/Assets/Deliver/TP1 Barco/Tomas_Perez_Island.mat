@@ -81,11 +81,11 @@ Material:
     - _EdgeLength: 15
     - _Float0: 5.18
     - _IslandHeight: 50
-    - _IslandTile: 0.3
+    - _IslandTile: -0.33
     - _NormalIntensity: 1
     - _NormalIntensity1: 1
     - _NormalSpeedArray1: 0.4
-    - _StoneHeight: 8
+    - _StoneHeight: 3.91
     - _Tiling: 1
     - _Tiling1: 0.1
     - _WaveTile1: 0.05
