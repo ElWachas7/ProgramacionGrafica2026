@@ -40,6 +40,7 @@ Material:
     m_Floats:
     - _Amplitude: 0.005
     - _Color: 0
+    - _DisappearingEdge: 0
     - _EdgeLength: 19.1
     - _Float0: 0.784
     - _Frequency: 0.455

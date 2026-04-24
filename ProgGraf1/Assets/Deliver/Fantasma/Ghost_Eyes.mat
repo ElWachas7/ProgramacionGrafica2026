@@ -28,6 +28,7 @@ Material:
     m_Floats:
     - _Amplitude: 0.005
     - _Amplitude1: 0.01
+    - _DisappearingEdge1: 0
     - _Float0: 1
     - _Frequency1: 0.424
     - _Opacity: 0.801
