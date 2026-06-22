@@ -108,17 +108,17 @@ Shader "EfectoFlashBang"
 }
 /*ASEBEGIN
 Version=18900
-286;73;529;918;358.0353;922.7379;1.3;False;False
+378;73;238;918;358.0353;922.7379;1.3;False;False
 Node;AmplifyShaderEditor.TemplateShaderPropertyNode;1;-766.5757,-326.6079;Inherit;False;0;0;_MainTex;Shader;False;0;5;SAMPLER2D;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.CommentaryNode;15;-164.7584,-194.6257;Inherit;False;755.2666;341.4218;Aisla el brillo con Luminance y Power, y los intensifica con FlashBangForce;6;8;7;6;3;5;4;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.SamplerNode;2;-530.9371,-341.3575;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.CommentaryNode;16;-214.2414,-634.4667;Inherit;False;730.1209;318.3319;Activa y desactiva el flashbang constantemente (el saturate clampea de 1 a 0 para que no vaya a -1);3;12;13;14;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.RangedFloatNode;5;-111.5117,-32.62361;Inherit;False;Constant;_LightStrength;LightStrength;0;0;Create;True;0;0;0;False;0;False;0.05;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.LuminanceNode;3;-114.7584,-144.6257;Inherit;False;1;0;FLOAT3;0,0,0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.PowerNode;4;63.79528,-120.277;Inherit;False;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0
+Node;AmplifyShaderEditor.WireNode;9;-196.8289,188.4799;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.RangedFloatNode;7;80.8877,30.79602;Inherit;False;Constant;_FlashBangForce;FlashBangForce;0;0;Create;True;0;0;0;False;0;False;0.8;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleTimeNode;13;-164.2414,-582.4875;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
-Node;AmplifyShaderEditor.WireNode;9;-196.8289,188.4799;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.PowerNode;4;63.79528,-120.277;Inherit;False;False;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SinOpNode;12;83.15712,-584.4667;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.WireNode;10;241.4384,198.2194;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;6;287.1882,-120.2008;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
@@ -128,9 +128,9 @@ Node;AmplifyShaderEditor.LerpOp;11;672.4286,-316.2321;Inherit;False;3;0;COLOR;0,
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;964.5258,-84.23892;Float;False;True;-1;2;ASEMaterialInspector;0;4;EfectoFlashBang;c71b220b631b6344493ea3cf87110c93;True;SubShader 0 Pass 0;0;0;SubShader 0 Pass 0;1;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;-1;False;False;False;False;False;False;False;False;False;False;False;True;2;False;-1;True;7;False;-1;False;True;0;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;0;;0;0;Standard;0;0;1;True;False;;False;0
 WireConnection;2;0;1;0
 WireConnection;3;0;2;0
-WireConnection;9;0;2;0
 WireConnection;4;0;3;0
 WireConnection;4;1;5;0
+WireConnection;9;0;2;0
 WireConnection;12;0;13;0
 WireConnection;10;0;9;0
 WireConnection;6;0;4;0
@@ -143,4 +143,4 @@ WireConnection;11;1;8;0
 WireConnection;11;2;14;0
 WireConnection;0;0;11;0
 ASEEND*/
-//CHKSM=A0D06CA979610664762C179BB8DD57D066BBA660
+//CHKSM=7ACE70A99501D4730816C1F6F1858709F45EB8B0
