@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5857194d47c855744a7a03da96b4a1e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myShader: {fileID: 4800000, guid: 5d235a41250fd1b418026854e6ecf112, type: 3}
+  myShader: {fileID: 4800000, guid: c827c6db3d2752342baaf0a40e9f5838, type: 3}
 --- !u!1 &647213405
 GameObject:
   m_ObjectHideFlags: 0
