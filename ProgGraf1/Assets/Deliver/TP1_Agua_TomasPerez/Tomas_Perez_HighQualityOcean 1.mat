@@ -57,12 +57,12 @@ Material:
     - _Bias: 1
     - _DEAPTH: 12.94
     - _DIVIDEEE: 2
-    - _DeapthFoamTileEdge: 1.15
+    - _DeapthFoamTileEdge: 1.18
     - _DepthFoamTileWave: 4
-    - _DepthMaskIntensity: 0.041
+    - _DepthMaskIntensity: -0.276
     - _DepthMultiply: 0.399
     - _DepthPower: 2
-    - _Distance: 6.51
+    - _Distance: 5.44
     - _Dividedepth: 10.52
     - _DividedepthWave: 20.1
     - _EdgeLength: 2
@@ -71,28 +71,28 @@ Material:
     - _Inverter: 1
     - _Multiply: 0.328
     - _NoiseSpeed: 0.1
-    - _NormalPower: 0
+    - _NormalPower: 0.555
     - _NormalPower1: 1
     - _NormalSpeed: 0
-    - _NormalSpeedArray: 0.195
+    - _NormalSpeedArray: 0.332
     - _NormalSpeedArray1: 0.535
     - _NormalTile: 0.04
     - _PannerNormalSpeed1: 0.05
     - _Power: 0.38
-    - _Refractamount: 0.143
-    - _RefractionDepth: 30.5
+    - _Refractamount: 0.121
+    - _RefractionDepth: 22.8
     - _Smoothnes: 1
     - _TessMax: 25
     - _TessMaxDisp: 25
     - _TessMin: 10
     - _TessValue: 15
     - _Tessellation: 100
-    - _Tiling: 0.0181
+    - _Tiling: 0.0278
     - _Tiling1: 0.0647
     - _WaveCount: -0.646
     - _WaveCount1: 0
     - _WaveCount2: -0.27
-    - _WaveHeight: 3.41
+    - _WaveHeight: 3.37
     - _WaveIntensity: -0.32
     - _WaveSpeed: 1.14
     - _WaveSpeed1: 0
@@ -107,6 +107,6 @@ Material:
     - _TopColor: {r: 0.8066038, g: 0.8710692, b: 1, a: 1}
     - _Vector1: {r: 1.82, g: 0.1, b: 0, a: 0}
     - _Wave2Mult: {r: 0.53, g: 0.2, b: 0, a: 0}
-    - _WaveStretch: {r: 45.34, g: 4.3, b: 0, a: 0}
+    - _WaveStretch: {r: 41.16, g: 4.3, b: 0, a: 0}
     - _waterColor: {r: 0, g: 0.27748403, b: 0.50980395, a: 1}
   m_BuildTextureStacks: []
