@@ -67,11 +67,11 @@ Material:
     m_Ints: []
     m_Floats:
     - PixelSnap: 0
-    - _DistortionAmount: 0
+    - _DistortionAmount: 3.32
     - _Graffiti_HeightLimit: 0
     - _Graffiti_HeightLimit1: 0
     - _LinearSpeed: 0.249
-    - _WaveAmplitude: 0.95
+    - _WaveAmplitude: 0
     - _WaveFrequency: 3.33
     - _WaveSpeed: 0.49
     m_Colors:
