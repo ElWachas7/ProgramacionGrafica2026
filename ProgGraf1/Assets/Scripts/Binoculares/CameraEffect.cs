@@ -11,6 +11,8 @@ public class CameraEffect : MonoBehaviour
     [SerializeField] private Transform _pivot1ft;
     [SerializeField] private float _posSpeed = 5f;
     [SerializeField] private float _rotSpeed = 5f;
+    [SerializeField] private Canvas _canvas;
+    private bool _canvasEnabled;
     private bool _enabledFocus;
 
     public Material viewfinderMaterial;
@@ -18,6 +20,13 @@ public class CameraEffect : MonoBehaviour
     public float closedRadius = 0f;
     public float closeDuration = 0.1f;
 
+    public void Start()
+    {
+        viewfinderMaterial.SetFloat("_FadeStart", 0.6f );
+        viewfinderMaterial.SetFloat("_FadeEnd", 0.4f);
+        _canvas.gameObject.SetActive(false);
+        _canvasEnabled = false;
+    }
     void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
         Material activeMaterial = _enabledFocus ? viewfinderMaterial : null;
@@ -42,7 +51,7 @@ public class CameraEffect : MonoBehaviour
     {
         if (_enabledFocus)
         {
-            transform.position = Vector3.Lerp(transform.position, _pivot1ft.position, _posSpeed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, _pivot1ft.position, 20 * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, _pivot1ft.rotation, _rotSpeed * Time.deltaTime);
         }
         else
@@ -67,6 +76,10 @@ public class CameraEffect : MonoBehaviour
             Texture2D photo = _photoCapture.TakePhoto();
             Debug.Log("Foto sacada: " + photo.width + "x" + photo.height);
             OpenEffect();
+        }
+        else if(!_enabledFocus && Input.GetMouseButtonDown(0)) 
+        {
+            ToggleCanvas();
         }
     }
 
@@ -93,5 +106,10 @@ public class CameraEffect : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * 30f);
+    }
+    public void ToggleCanvas()
+    {
+        _canvasEnabled = !_canvasEnabled;
+        _canvas.gameObject.SetActive(_canvasEnabled);
     }
 }
