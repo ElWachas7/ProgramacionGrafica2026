@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class CameraEffect : MonoBehaviour
 {
+    [SerializeField] private Photo _photoCapture;
     [SerializeField] private Transform _pivot3rd;
     [SerializeField] private Transform _pivot1ft;
     [SerializeField] private float _posSpeed = 5f;
@@ -63,6 +64,8 @@ public class CameraEffect : MonoBehaviour
         if (_enabledFocus && Input.GetMouseButtonDown(0))
         {
             CloseEffect();
+            Texture2D photo = _photoCapture.TakePhoto();
+            Debug.Log("Foto sacada: " + photo.width + "x" + photo.height);
             OpenEffect();
         }
     }

@@ -34,8 +34,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FadeEnd: 0.439
-    - _FadeStart: 0.508
+    - _FadeEnd: 0.4
+    - _FadeStart: 0.6
     - _FishEyePower: 0.44
     - _GrainIntensity: 0.294
     - _GraintContrast: 0.574
