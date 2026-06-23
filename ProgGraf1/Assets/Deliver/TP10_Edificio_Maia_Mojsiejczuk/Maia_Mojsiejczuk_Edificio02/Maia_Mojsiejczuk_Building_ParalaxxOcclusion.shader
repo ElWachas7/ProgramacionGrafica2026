@@ -229,7 +229,7 @@ Shader "Maia_Mojsiejczuk_Building_ParalaxxOcclusion"
 }
 /*ASEBEGIN
 Version=18900
-220;73;1244;554;1501.812;92.02209;1.380872;True;False
+214;73;1323;706;1390.907;842.2312;1;True;False
 Node;AmplifyShaderEditor.Vector2Node;19;-1353.787,-424.6437;Inherit;False;Property;_Graffiti_Tiling;Graffiti_Tiling;5;0;Create;True;0;0;0;False;0;False;3,3;0.9,15.69;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.RangedFloatNode;3;-1911.238,5.593391;Inherit;False;Property;_GraffitiFill_Offset;GraffitiFill_Offset;2;0;Create;True;0;0;0;False;0;False;0.1;0.3;0.1;0.3;0;1;FLOAT;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;20;-1125.787,-411.6437;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
@@ -237,22 +237,22 @@ Node;AmplifyShaderEditor.Vector2Node;1;-1841.451,-147.4063;Inherit;False;Propert
 Node;AmplifyShaderEditor.CommentaryNode;30;-1095.445,-835.0313;Inherit;False;607.9771;364.1616;Limita la altura del grafiti;3;28;25;26;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.CommentaryNode;18;-1332.787,272.3564;Inherit;False;778;455.9999;Bricks;4;13;15;17;16;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;2;-1599.451,-72.40626;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.CommentaryNode;28;-739.4677,-729.5698;Inherit;False;202;185;Si es 0 no dibuja la textura, si es 1 si;1;24;;0.5943396,0.1541919,0.1541919,1;0;0
-Node;AmplifyShaderEditor.SamplerNode;21;-893.7867,-421.6437;Inherit;True;Property;_RB_Graffiti;RB_Graffiti;4;0;Create;True;0;0;0;False;0;False;-1;None;5d78840ab1220554b89039595a51af5a;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;26;-1009.445,-598.8697;Inherit;False;Property;_Graffiti_HeightLimit;Graffiti_HeightLimit;7;0;Create;True;0;0;0;False;0;False;0;3;-1;3;0;1;FLOAT;0
+Node;AmplifyShaderEditor.PosVertexDataNode;25;-917.4548,-785.0313;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TexturePropertyNode;29;-1380.957,-260.0479;Inherit;True;Property;_GraffitiFill_Texture;GraffitiFill_Texture;8;0;Create;True;0;0;0;False;0;False;None;2a047ac469aa84143a54cc09de068a26;False;white;Auto;Texture2D;-1;0;2;SAMPLER2D;0;SAMPLERSTATE;1
 Node;AmplifyShaderEditor.Vector2Node;16;-1315.292,450.9391;Inherit;False;Property;_Bricks_TileOffset;Bricks_TileOffset;6;0;Create;True;0;0;0;False;0;False;0,0;3,3;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
-Node;AmplifyShaderEditor.PosVertexDataNode;25;-917.4548,-785.0313;Inherit;False;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;26;-1009.445,-598.8697;Inherit;False;Property;_Graffiti_HeightLimit;Graffiti_HeightLimit;7;0;Create;True;0;0;0;False;0;False;0;3;-1;3;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SamplerNode;21;-893.7867,-421.6437;Inherit;True;Property;_RB_Graffiti;RB_Graffiti;4;0;Create;True;0;0;0;False;0;False;-1;None;5d78840ab1220554b89039595a51af5a;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.CommentaryNode;28;-739.4677,-729.5698;Inherit;False;202;185;Si es 0 no dibuja la textura, si es 1 si;1;24;;0.5943396,0.1541919,0.1541919,1;0;0
 Node;AmplifyShaderEditor.ViewDirInputsCoordNode;6;-1532.451,201.5931;Inherit;False;Tangent;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.RangedFloatNode;5;-1620.451,125.5932;Inherit;False;Property;_GraffitiFill_Scale;GraffitiFill_Scale;1;0;Create;True;0;0;0;False;0;False;0.1;0.4;0.1;0.4;0;1;FLOAT;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;17;-1121.787,426.3564;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.OneMinusNode;22;-600.4482,-413.5238;Inherit;False;1;0;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.ParallaxOcclusionMappingNode;4;-1185.651,-58.90626;Inherit;False;0;8;False;-1;16;False;-1;2;0.02;0;False;1,1;False;0,0;8;0;FLOAT2;0,0;False;1;SAMPLER2D;;False;7;SAMPLERSTATE;;False;2;FLOAT;0.02;False;3;FLOAT3;0,0,0;False;4;FLOAT;0;False;5;FLOAT2;0,0;False;6;FLOAT;0;False;1;FLOAT2;0
 Node;AmplifyShaderEditor.StepOpNode;24;-694.8292,-674.2084;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;23;-437.4482,-481.5238;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SamplerNode;13;-885.7867,322.3564;Inherit;True;Property;_Bricks;Bricks;3;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;15;-797.7867,516.3563;Inherit;False;Constant;_Bricks_Color;Bricks_Color;8;0;Create;True;0;0;0;False;0;False;0.4622642,0.4123262,0.2551175,0;0.4622642,0.4123262,0.2551175,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SamplerNode;7;-902.8619,-54.6997;Inherit;True;Property;_InsideGraffiti;InsideGraffiti;1;0;Create;True;0;0;0;False;0;False;-1;None;None;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SamplerNode;13;-885.7867,322.3564;Inherit;True;Property;_Bricks;Bricks;3;0;Create;True;0;0;0;False;0;False;-1;None;491a3bfc7fec30648a2de3e02e3bc92d;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;23;-437.4482,-481.5238;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;9;-441.5606,-229.3271;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;12;-503.7867,177.3564;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.LerpOp;11;-292.7867,24.35635;Inherit;False;3;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;2;COLOR;0,0,0,0;False;1;COLOR;0
@@ -270,11 +270,11 @@ WireConnection;4;2;5;0
 WireConnection;4;3;6;0
 WireConnection;24;0;25;2
 WireConnection;24;1;26;0
-WireConnection;7;0;29;0
-WireConnection;7;1;4;0
-WireConnection;13;1;17;0
 WireConnection;23;0;22;0
 WireConnection;23;1;24;0
+WireConnection;13;1;17;0
+WireConnection;7;0;29;0
+WireConnection;7;1;4;0
 WireConnection;9;0;23;0
 WireConnection;9;1;7;0
 WireConnection;12;0;13;0
@@ -284,4 +284,4 @@ WireConnection;11;1;12;0
 WireConnection;11;2;12;0
 WireConnection;0;0;11;0
 ASEEND*/
-//CHKSM=E1C0B1A07AE9CC8D0FD2FD724E942103FB8335D9
+//CHKSM=B36C95973D2687665497091D5502AFB74A938FAA

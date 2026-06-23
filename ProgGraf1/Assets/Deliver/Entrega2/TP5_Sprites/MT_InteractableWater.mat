@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MT_InteractableWater
+  m_Shader: {fileID: 4800000, guid: b476d533a89c5624b9452a02bce6dd7a, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BackgroundTexture:
+        m_Texture: {fileID: 8400000, guid: 98d006bff7e299e4482549e1627536fb, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortionMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FXTexture:
+        m_Texture: {fileID: 2800000, guid: 4d64cb8b52ab7ed41a67554d2df38228, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture0:
+        m_Texture: {fileID: 2800000, guid: 4d64cb8b52ab7ed41a67554d2df38228, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture1:
+        m_Texture: {fileID: 2800000, guid: 4d64cb8b52ab7ed41a67554d2df38228, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 4d64cb8b52ab7ed41a67554d2df38228, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterNormal:
+        m_Texture: {fileID: 2800000, guid: 26da8dec7fccda9429a78e8f26297497, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterTexture:
+        m_Texture: {fileID: 2800000, guid: 4d64cb8b52ab7ed41a67554d2df38228, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _DistortionAmount: 0
+    - _Graffiti_HeightLimit: 0
+    - _Graffiti_HeightLimit1: 0
+    - _LinearSpeed: 0.249
+    - _WaveAmplitude: 0.95
+    - _WaveFrequency: 3.33
+    - _WaveSpeed: 0.49
+    m_Colors:
+    - _Color: {r: 0.5896226, g: 0.75558406, b: 1, a: 1}
+    - _DistortionSpeed: {r: 0.1, g: 0, b: 0, a: 0}
+    - _ImpactPosition: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
