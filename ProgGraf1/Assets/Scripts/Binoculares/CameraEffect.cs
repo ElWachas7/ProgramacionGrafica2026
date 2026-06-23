@@ -15,12 +15,14 @@ public class CameraEffect : MonoBehaviour
     public Material viewfinderMaterial;
     public float openRadius = 0.5f;
     public float closedRadius = 0f;
-    public float closeDuration = 0.5f;
+    public float closeDuration = 0.1f;
 
     void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
-        if (viewfinderMaterial != null)
-            Graphics.Blit(src, dest, viewfinderMaterial);
+        Material activeMaterial = _enabledFocus ? viewfinderMaterial : null;
+
+        if (activeMaterial != null)
+            Graphics.Blit(src, dest, activeMaterial);
         else
             Graphics.Blit(src, dest);
     }
@@ -51,25 +53,23 @@ public class CameraEffect : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             _enabledFocus = true;
-            CloseEffect();
         }
 
         if (Input.GetMouseButtonUp(1))
         {
             _enabledFocus = false;
-            OpenEffect();
         }
 
         if (_enabledFocus && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Sacar Foto");
+            CloseEffect();
+            OpenEffect();
         }
     }
 
     private IEnumerator AnimateRadius(float from, float to)
     {
         if (viewfinderMaterial == null) yield break;
-
         float elapsed = 0f;
         while (elapsed < closeDuration)
         {
@@ -77,15 +77,18 @@ public class CameraEffect : MonoBehaviour
             float t = elapsed / closeDuration;
             t = t * t * (3f - 2f * t);
             float currentRadius = Mathf.Lerp(from, to, t);
-            viewfinderMaterial.SetFloat("_Radius", currentRadius);
+            viewfinderMaterial.SetFloat("_FadeStart", currentRadius + 0.1f);
+            viewfinderMaterial.SetFloat("_FadeEnd", currentRadius - 0.1f);
             yield return null;
         }
-        viewfinderMaterial.SetFloat("_Radius", to);
+        // Asegurar el valor final exacto
+        viewfinderMaterial.SetFloat("_FadeStart", to + 0.1f);
+        viewfinderMaterial.SetFloat("_FadeEnd", to - 0.1f);
     }
 
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.forward * 30f);
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * 30f);
     }
 }
