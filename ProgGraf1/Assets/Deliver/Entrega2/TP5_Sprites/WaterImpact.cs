@@ -4,42 +4,124 @@ using UnityEngine;
 
 public class WaterImpact : MonoBehaviour
 {
-    private Renderer render;
-    private MaterialPropertyBlock propBlock;
-    private int IDImpact;
+    [Header("Detección del objeto dentro del agua")]
+    [SerializeField] private Transform detectionOrigin;
+    [SerializeField] private LayerMask objectsLayer;
+    public Vector3 detectionOffset = new Vector3(0f, 0f, 1.2f);
+    public Vector3 boxSize = new Vector3(10f, 1.2f, 2f);
+    private bool useOriginRotation = false;
+    private float outerRadius = 5f;
+    private float innerRadius = 1f;
+    private float smoothSpeed = 2f;
 
-    void Start()
+    [Header("Variables shader")]
+    [SerializeField] private Color idleColor = Color.cyan;
+    [SerializeField] private Color activeColor = Color.blue;
+    [SerializeField] private string amplitudePropertyRef = "_WaveHeight";
+    [SerializeField] private string waterColorRef = "_WaterColor";
+
+    private float currentWaveIntensity;
+    private Color currentWaterColor;
+
+    [Header("Ajustes Visuales de Olas")]
+    [SerializeField] private float minWaveHeight;
+    [SerializeField] private float maxWaveHeight;
+
+    [SerializeField] private Material waterMaterial;
+
+    private void Awake()
     {
-        render = GetComponent<Renderer>();
-        propBlock = new MaterialPropertyBlock();
-        IDImpact = Shader.PropertyToID("ImpactPosition");
+        currentWaterColor = idleColor;
+        currentWaveIntensity = minWaveHeight;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void Update()
     {
-        Debug.Log("¡ALGO tocó el agua! Fue el objeto: " + other.gameObject.name);
+        float proximity = ProximityFactor();
+        float targetIntensity = Mathf.Lerp (minWaveHeight, maxWaveHeight, proximity);
+        Color targetColor = Color.Lerp(idleColor, activeColor, proximity);
 
-        if (other.CompareTag("Player"))
+        currentWaveIntensity = Mathf.Lerp(currentWaveIntensity, targetIntensity, Time.deltaTime * smoothSpeed);
+        currentWaterColor = Color.Lerp(currentWaterColor, targetColor, Time.deltaTime * smoothSpeed);
+
+        ApplyToShader(currentWaveIntensity, currentWaterColor);
+    }
+
+    private Vector3 GetDetectionCenter()
+    {
+        Transform origin = detectionOrigin != null ? detectionOrigin : transform;
+        return origin.position + origin.TransformDirection(detectionOffset);
+    }
+
+    private Quaternion GetDetectionRotation()
+    {
+        if (!useOriginRotation)
         {
-            GenerarOnda(other.transform.position);
-            Debug.Log("Objeto ENTRÓ al agua");
+            return Quaternion.identity;
+        }
+
+        Transform origin = detectionOrigin != null ? detectionOrigin : transform;
+        return origin.rotation;
+    }
+
+    private float ProximityFactor()
+    {
+        Vector3 center = GetDetectionCenter();
+        Quaternion rotation = GetDetectionRotation();
+
+        Collider[] nearbyObjects = Physics.OverlapBox(center, boxSize * .5f, rotation, objectsLayer);
+
+        if (nearbyObjects.Length == 0)
+        {
+            return 0f;
+        }
+
+        float closestDistance = outerRadius;
+
+        foreach (Collider col in nearbyObjects)
+        {
+            float dist = Vector3.Distance(center, col.transform.position);
+            if (dist < closestDistance)
+            {
+                closestDistance = dist;
+            }
+        }
+
+        float t = Mathf.InverseLerp(outerRadius, innerRadius, closestDistance);
+        return Mathf.Clamp01(t);
+    }
+
+    private void ApplyToShader(float level, Color color)
+    {
+        if (waterMaterial != null)
+        {
+            waterMaterial.SetFloat(amplitudePropertyRef, level);
+            waterMaterial.SetColor(waterColorRef, color);
         }
     }
+    // Útil para ver el área de detección y los rangos de influencia en el editor
 
-    private void OnTriggerExit(Collider other)
+    void OnDrawGizmosSelected()
+
     {
-        if (other.CompareTag("Player"))
-        {
-            GenerarOnda(other.transform.position);
-            Debug.Log("Objeto SALIÓ del agua");
-        }
-    }
-    private void GenerarOnda(Vector3 posicion)
-    {
-        render.GetPropertyBlock(propBlock);
 
-        propBlock.SetVector(IDImpact, posicion);
+        Vector3 center = GetDetectionCenter();
 
-        render.SetPropertyBlock(propBlock);
+        Quaternion rotation = GetDetectionRotation();
+
+
+
+        // Caja de detección (respeta rotación si useOriginRotation está activo)
+
+        Gizmos.color = Color.cyan;
+
+        Matrix4x4 oldMatrix = Gizmos.matrix;
+
+        Gizmos.matrix = Matrix4x4.TRS(center, rotation, Vector3.one);
+
+        Gizmos.DrawWireCube(Vector3.zero, boxSize);
+
+        Gizmos.matrix = oldMatrix;
+
     }
 }
