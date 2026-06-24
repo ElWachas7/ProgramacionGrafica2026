@@ -12,6 +12,8 @@ public class CameraEffect : MonoBehaviour
     [SerializeField] private float _posSpeed = 5f;
     [SerializeField] private float _rotSpeed = 5f;
     [SerializeField] private Canvas _canvas;
+    [SerializeField] private AudioClip _audioClip;
+    private AudioSource _audioSource;
     private bool _canvasEnabled;
     private bool _enabledFocus;
 
@@ -22,6 +24,7 @@ public class CameraEffect : MonoBehaviour
 
     public void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         viewfinderMaterial.SetFloat("_FadeStart", 0.6f );
         viewfinderMaterial.SetFloat("_FadeEnd", 0.4f);
         _canvas.gameObject.SetActive(false);
@@ -74,6 +77,7 @@ public class CameraEffect : MonoBehaviour
         {
             CloseEffect();
             Texture2D photo = _photoCapture.TakePhoto();
+            _audioSource.PlayOneShot(_audioClip);
             Debug.Log("Foto sacada: " + photo.width + "x" + photo.height);
             OpenEffect();
         }

@@ -31,7 +31,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _MaxGlowDistance: 4
+    - _Subtract: 4
     - __dirty: 0
     m_Colors:
-    - _Player: {r: 12.779776, g: 1.3197048, b: -13.876543, a: 0}
+    - _Player: {r: 1.0169603, g: 0.57786286, b: -5.849862, a: 0}
   m_BuildTextureStacks: []

@@ -6,6 +6,7 @@ Shader "ShinyItem"
 	{
 		_Texture0("Texture 0", 2D) = "white" {}
 		_Player("_Player", Vector) = (0,0,0,0)
+		_Subtract("Subtract", Float) = 4
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -28,6 +29,7 @@ Shader "ShinyItem"
 
 		uniform sampler2D _Texture0;
 		uniform float4 _Texture0_ST;
+		uniform float _Subtract;
 		uniform float3 _Player;
 
 		void surf( Input i , inout SurfaceOutputStandard o )
@@ -39,7 +41,7 @@ Shader "ShinyItem"
 			float fresnelNode10 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV10, 5.0 ) );
 			float4 color11 = IsGammaSpace() ? float4(1,0.978618,0.8820755,0) : float4(1,0.9520468,0.7524076,0);
 			float3 ase_worldPos = i.worldPos;
-			o.Emission = ( ( fresnelNode10 * color11 ) * (4.0 + (( 4.0 - distance( ase_worldPos , _Player ) ) - 0.0) * (5.0 - 4.0) / (1.0 - 0.0)) ).rgb;
+			o.Emission = ( ( fresnelNode10 * color11 ) * (4.0 + (( _Subtract - distance( ase_worldPos , _Player ) ) - 0.0) * (5.0 - 4.0) / (1.0 - 0.0)) ).rgb;
 			o.Alpha = 1;
 		}
 
@@ -124,12 +126,12 @@ Shader "ShinyItem"
 }
 /*ASEBEGIN
 Version=18900
-219;73;1284;560;1245.931;-242.6404;1;True;False
+219;73;1284;665;1517.811;-260.8656;1;True;False
 Node;AmplifyShaderEditor.WorldPosInputsNode;3;-1278.478,633.9048;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.Vector3Node;4;-1267.478,815.9055;Inherit;False;Property;_Player;_Player;1;0;Create;True;0;0;0;False;0;False;0,0,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.Vector3Node;4;-1267.478,815.9055;Inherit;False;Property;_Player;_Player;1;0;Create;True;0;0;0;False;0;False;0,0,0;12.77978,1.319705,-13.87654;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.ViewDirInputsCoordNode;13;-1234.806,179.2593;Inherit;False;World;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.DistanceOpNode;5;-1053.478,730.9055;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;21;-1042.404,552.7822;Inherit;False;Constant;_Float0;Float 0;2;0;Create;True;0;0;0;False;0;False;4;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;21;-1042.404,552.7822;Inherit;False;Property;_Subtract;Subtract;2;0;Create;True;0;0;0;False;0;False;4;4;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.FresnelNode;10;-1016.704,160.4725;Inherit;False;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;11;-1010.418,333.4575;Inherit;False;Constant;_Color0;Color 0;3;0;Create;True;0;0;0;False;0;False;1,0.978618,0.8820755,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleSubtractOpNode;19;-795.6002,553.8786;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
@@ -153,4 +155,4 @@ WireConnection;15;1;22;0
 WireConnection;0;0;1;0
 WireConnection;0;2;15;0
 ASEEND*/
-//CHKSM=3B9A5EE3E988516259DC430AC138CCBF2A9C0780
+//CHKSM=5CB7A00A4862419FB759F40661D1306C0773AB3F
