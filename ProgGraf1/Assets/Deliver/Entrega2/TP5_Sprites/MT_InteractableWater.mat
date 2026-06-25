@@ -68,6 +68,7 @@ Material:
     m_Floats:
     - PixelSnap: 0
     - _1: 0.31
+    - _Add: 0.298
     - _DistortionAmount: 0
     - _Float0: 5
     - _Float1: 0.663
@@ -76,6 +77,8 @@ Material:
     - _Graffiti_HeightLimit1: 0
     - _LinearSpeed: 0.249
     - _MaxHeight: 3
+    - _Multiply: 0
+    - _Power: 0
     - _Speed: 2
     - _Speed1: 2
     - _TransAmbient: 0.2
@@ -90,8 +93,8 @@ Material:
     - _WaveAmplitude: 1
     - _WaveFrequency: 1.68
     - _WaveFrequency1: 5
-    - _WaveHeight: 0.6696469
-    - _WaveSpeed: 2.33
+    - _WaveHeight: 0.6522623
+    - _WaveSpeed: 0.63
     - __dirty: 0
     - _waterOpacity: 0.4982522
     - _waterOpacity1: 0.491
@@ -101,5 +104,5 @@ Material:
     - _DistortionSpeed: {r: 0.1, g: 0, b: 0, a: 0}
     - _ImpactPosition: {r: 0, g: 1, b: 0, a: 0}
     - _Wate: {r: 0, g: 0.2860703, b: 0.6037736, a: 0}
-    - _WaterColor: {r: 0.25103197, g: 0.58622795, b: 0.6652255, a: 1}
+    - _WaterColor: {r: 0.26695564, g: 0.6019929, b: 0.68097, a: 1}
   m_BuildTextureStacks: []

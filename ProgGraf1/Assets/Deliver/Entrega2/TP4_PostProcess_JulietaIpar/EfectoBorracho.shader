@@ -110,7 +110,7 @@ Shader "EfectoBorracho"
 }
 /*ASEBEGIN
 Version=18900
-773;81;608;909;1367.31;1525.685;4.053651;False;False
+175;73;1292;645;165.909;9.946678;1;True;False
 Node;AmplifyShaderEditor.CommentaryNode;14;-1269.228,-287.713;Inherit;False;944.6161;454.4678;Creación de las ondas;9;1;4;3;6;8;2;7;9;10;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.ScreenPosInputsNode;4;-1219.228,-80.22486;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ComponentMaskNode;6;-1027.61,-25.64992;Inherit;False;True;True;True;True;1;0;FLOAT;0;False;1;FLOAT;0
@@ -119,8 +119,8 @@ Node;AmplifyShaderEditor.RangedFloatNode;8;-1004.568,50.75478;Inherit;False;Cons
 Node;AmplifyShaderEditor.SimpleTimeNode;1;-1007.976,-237.7131;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;7;-819.0132,-25.65;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;2;-805.4435,-196.4789;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;3;False;1;FLOAT;0
-Node;AmplifyShaderEditor.CommentaryNode;20;-293.4208,-183.926;Inherit;False;474.289;281.3989;Reduce la fuerza del efecto y crea un nuevo componente;3;15;17;16;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.SimpleAddOpNode;9;-658.7596,-147.3752;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.CommentaryNode;20;-293.4208,-183.926;Inherit;False;474.289;281.3989;Reduce la fuerza del efecto y crea un nuevo componente;3;15;17;16;;1,1,1,1;0;0
 Node;AmplifyShaderEditor.RangedFloatNode;16;-243.4208,-18.52714;Inherit;False;Constant;_Strength;Strength;0;0;Create;True;0;0;0;False;0;False;0.01;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SinOpNode;10;-522.6121,-141.5372;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.CommentaryNode;21;-383.65,219.8347;Inherit;False;1212.78;312.6361;Sumar las ondas al Screen Position y conectarlo al UV de la pantalla, para en lugar de pintar el seno, utilizar esa información para mover dónde se pinta cada píxel;4;19;11;18;12;;1,1,1,1;0;0
@@ -148,4 +148,4 @@ WireConnection;12;0;11;0
 WireConnection;12;1;18;0
 WireConnection;0;0;12;0
 ASEEND*/
-//CHKSM=3102F2A0649F02F463F6F71C27E2249E9ACA5B74
+//CHKSM=99F5618251AC831FDC930D57B8CFBF48D1CCC763

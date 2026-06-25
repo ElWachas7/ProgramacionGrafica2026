@@ -99,7 +99,6 @@ public class WaterImpact : MonoBehaviour
             waterMaterial.SetColor(waterColorRef, color);
         }
     }
-    // Útil para ver el área de detección y los rangos de influencia en el editor
 
     void OnDrawGizmosSelected()
 
@@ -110,10 +109,7 @@ public class WaterImpact : MonoBehaviour
         Quaternion rotation = GetDetectionRotation();
 
 
-
-        // Caja de detección (respeta rotación si useOriginRotation está activo)
-
-        Gizmos.color = Color.cyan;
+        Gizmos.color = Color.yellow;
 
         Matrix4x4 oldMatrix = Gizmos.matrix;
 
