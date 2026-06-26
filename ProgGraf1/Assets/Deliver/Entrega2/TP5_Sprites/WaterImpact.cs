@@ -17,7 +17,7 @@ public class WaterImpact : MonoBehaviour
     [Header("Variables shader")]
     [SerializeField] private Color idleColor = Color.cyan;
     [SerializeField] private Color activeColor = Color.blue;
-    [SerializeField] private string amplitudePropertyRef = "_WaveHeight";
+   // [SerializeField] private string amplitudePropertyRef = "_WaveHeight";
     [SerializeField] private string waterColorRef = "_WaterColor";
 
     private float currentWaveIntensity;
@@ -27,12 +27,15 @@ public class WaterImpact : MonoBehaviour
     [SerializeField] private float minWaveHeight;
     [SerializeField] private float maxWaveHeight;
 
+    [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Material waterMaterial;
 
     private void Awake()
     {
+        sr = GetComponent<SpriteRenderer>();
         currentWaterColor = idleColor;
         currentWaveIntensity = minWaveHeight;
+        waterMaterial = sr.material;
     }
 
     void Update()
@@ -45,6 +48,14 @@ public class WaterImpact : MonoBehaviour
         currentWaterColor = Color.Lerp(currentWaterColor, targetColor, Time.deltaTime * smoothSpeed);
 
         ApplyToShader(currentWaveIntensity, currentWaterColor);
+
+        Vector3 local = transform.InverseTransformPoint(detectionOrigin.position);
+        Bounds b = sr.localBounds;
+
+        float u = (local.x - b.min.x) / b.size.x;
+        float v = (local.y - b.min.y) / b.size.y;
+
+        waterMaterial.SetVector("_Player", new Vector4(u, v, 0, 0));
     }
 
     private Vector3 GetDetectionCenter()
@@ -95,29 +106,19 @@ public class WaterImpact : MonoBehaviour
     {
         if (waterMaterial != null)
         {
-            waterMaterial.SetFloat(amplitudePropertyRef, level);
+            //waterMaterial.SetFloat(amplitudePropertyRef, level);
             waterMaterial.SetColor(waterColorRef, color);
         }
     }
 
     void OnDrawGizmosSelected()
-
     {
-
         Vector3 center = GetDetectionCenter();
-
         Quaternion rotation = GetDetectionRotation();
-
-
         Gizmos.color = Color.yellow;
-
         Matrix4x4 oldMatrix = Gizmos.matrix;
-
         Gizmos.matrix = Matrix4x4.TRS(center, rotation, Vector3.one);
-
         Gizmos.DrawWireCube(Vector3.zero, boxSize);
-
         Gizmos.matrix = oldMatrix;
-
     }
 }
