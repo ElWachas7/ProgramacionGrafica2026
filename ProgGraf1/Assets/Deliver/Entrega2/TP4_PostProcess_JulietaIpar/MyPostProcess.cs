@@ -3,18 +3,17 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class MyPostProcess : MonoBehaviour
 {
-    [SerializeField] private Shader myShader;
     private Material material;
 
-    private void Awake()
+    public void SetShader(Shader newShader)
     {
-        if (myShader != null)
+        if (newShader != null)
         {
-            material = new Material(myShader);
+            material = new Material (newShader);
         }
         else
         {
-            Debug.LogError("falta asignar el shader en inspector");
+            Debug.LogError("shader nulo");
         }
     }
 
