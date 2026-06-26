@@ -36,16 +36,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Street.unity
     guid: 0da0f79b971fdc94c8587763574b0c76
   - enabled: 1
-    path: Assets/Deliver/Entrega2/TP1_Binoculares_TomasPerez/SimpleNaturePack_Demo.unity
+    path: Assets/Scenes/SimpleNaturePack_Demo.unity
     guid: 5e7af4bd95ac53a4cb784a9eedf8f6f9
   - enabled: 1
-    path: Assets/Deliver/Entrega2/TP2_Wall/Wall.unity
+    path: Assets/Scenes/Wall.unity
     guid: 3e2c3271ef438604397890646e774b8f
   - enabled: 1
-    path: Assets/Deliver/Entrega2/TP3_Outline/TP3_Outline.unity
+    path: Assets/Scenes/TP3_Outline.unity
     guid: 47b8cbd7f202ff649bbc2c215a89ef2d
   - enabled: 1
-    path: Assets/Deliver/Entrega2/TP4_PostProcess_JulietaIpar/TP4_PostProcess.unity
+    path: Assets/Scenes/TP4_PostProcess.unity
     guid: 0bbe0624ea789e647b17dd8948abaa93
   - enabled: 1
     path: Assets/Deliver/Entrega2/TP5_Sprites/Sprites_Water.unity
