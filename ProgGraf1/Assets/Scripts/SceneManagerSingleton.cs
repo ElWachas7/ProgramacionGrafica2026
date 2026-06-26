@@ -36,7 +36,7 @@ public class SceneManagerSingleton : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        _scenes = new string[] { _scene1, _scene2, _scene3, _scene4, _scene5, _scene7, _scene8, _scene9, _scene11 };
+        _scenes = new string[] { _scene8, _scene1, _scene2, _scene3, _scene4, _scene5, _scene7, _scene9, _scene11 };
     }
 
     /*private void Start()
