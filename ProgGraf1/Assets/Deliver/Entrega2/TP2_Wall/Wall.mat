@@ -33,14 +33,14 @@ Material:
     - CutoutSize: 0
     - FalloffSize: 0
     - _Cutoff: 1
-    - _CutoutSize: 0.1
-    - _FalloffSize: 0.05
+    - _CutoutSize: 0
+    - _FalloffSize: 0
     - _Size: 0
     - __dirty: 0
     m_Colors:
     - _Cut: {r: 5.28, g: 3.85, b: 2.93, a: 1.17}
     - _CutoutPos: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _Player: {r: 0.56155485, g: 0.62698734, b: 10.869602, a: 0}
+    - _Player: {r: 0.6660925, g: 0.72120506, b: 12.999083, a: 0}
     - _Tilling: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

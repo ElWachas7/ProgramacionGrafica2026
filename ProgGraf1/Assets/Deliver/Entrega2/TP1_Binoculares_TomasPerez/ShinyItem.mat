@@ -34,5 +34,5 @@ Material:
     - _Subtract: 4
     - __dirty: 1
     m_Colors:
-    - _Player: {r: -5.163793, g: 0.426228, b: 1.1739334, a: 0}
+    - _Player: {r: 1.0169168, g: 0.5778607, b: -5.849862, a: 0}
   m_BuildTextureStacks: []
