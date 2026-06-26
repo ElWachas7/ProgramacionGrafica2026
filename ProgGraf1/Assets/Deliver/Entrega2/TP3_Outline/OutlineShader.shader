@@ -4,7 +4,7 @@ Shader "Unlit/OutlineShader"
 {
 	Properties
 	{
-		_Width("Width", Range( 0 , 0.5)) = 0.1
+		_Width("Width", Range( 0.05 , 0.25)) = 0.05
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
 
@@ -55,9 +55,9 @@ Shader "Unlit/OutlineShader"
 }
 /*ASEBEGIN
 Version=18900
-184;73;1280;700;1237.753;-10.46378;1;True;True
+184;73;1280;700;1182.299;33.18262;1;True;True
 Node;AmplifyShaderEditor.NormalVertexDataNode;6;-770.0099,276.926;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.RangedFloatNode;7;-802.3044,479.1352;Inherit;False;Property;_Width;Width;0;0;Create;True;0;0;0;False;0;False;0.1;0;0;0.5;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;7;-754.3044,479.1352;Inherit;False;Property;_Width;Width;0;0;Create;True;0;0;0;False;0;False;0.05;0;0.05;0.25;0;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;2;-546.7834,32.11996;Inherit;False;Constant;_Color0;Color 0;0;0;Create;True;0;0;0;False;0;False;0,0.9902081,1,1;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;8;-482.598,403.7241;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;-39.26141,0;Float;False;True;-1;2;ASEMaterialInspector;0;0;Standard;Unlit/OutlineShader;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Front;2;False;-1;2;False;-1;True;-2;False;-1;-2;False;-1;False;0;Opaque;0.5;True;False;0;False;Opaque;;Geometry;All;14;all;True;True;True;True;0;False;-1;True;1;False;-1;255;False;-1;255;False;-1;6;False;-1;1;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;2;5;False;-1;10;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;False;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
@@ -66,4 +66,4 @@ WireConnection;8;1;7;0
 WireConnection;0;2;2;0
 WireConnection;0;11;8;0
 ASEEND*/
-//CHKSM=54F94CE00CD3837F2BD3D183617B6262B690C7EB
+//CHKSM=4398E428B9B7035531509BE489807F9C94B1DD30

@@ -23,7 +23,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _OutlineWidth: 1
-    - _Width: 0.5
+    - _Width: 0.05
     - __dirty: 0
     m_Colors: []
   m_BuildTextureStacks: []
