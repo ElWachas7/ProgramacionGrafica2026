@@ -14,11 +14,9 @@ public class SceneManagerSingleton : MonoBehaviour
     [SerializeField] private string _scene3;
     [SerializeField] private string _scene4;
     [SerializeField] private string _scene5;
-    [SerializeField] private string _scene6;
     [SerializeField] private string _scene7;
     [SerializeField] private string _scene8;
     [SerializeField] private string _scene9;
-    [SerializeField] private string _scene10;
     [SerializeField] private string _scene11;
 
     [Header("Botones del Canvas")]
@@ -38,13 +36,25 @@ public class SceneManagerSingleton : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        _scenes = new string[] { _scene1, _scene2, _scene3, _scene4, _scene5, _scene6, _scene7, _scene8, _scene9, _scene10, _scene11 };
+        _scenes = new string[] { _scene8, _scene1, _scene2, _scene3, _scene4, _scene5, _scene7, _scene9, _scene11 };
     }
 
-    private void Start()
+    /*private void Start()
     {
         botonAnterior.onClick.AddListener(PreviousScene);
         botonSiguiente.onClick.AddListener(NextScene);
+    }*/
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && _scenes != null)
+        {
+            NextScene();
+        }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            PreviousScene();
+        }
+            
     }
 
     public void LoadScene(int num)
