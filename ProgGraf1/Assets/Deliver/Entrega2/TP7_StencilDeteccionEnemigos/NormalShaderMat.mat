@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineMaterial
-  m_Shader: {fileID: 4800000, guid: cd46b824eb737e44fad4e5469303ce61, type: 3}
+  m_Name: NormalShaderMat
+  m_Shader: {fileID: 4800000, guid: 7b1d6d055b1be0a438ca0683590b82d9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2001
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -22,8 +22,6 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _OutlineWidth: 1
-    - _Width: 0.5
     - __dirty: 0
     m_Colors: []
   m_BuildTextureStacks: []

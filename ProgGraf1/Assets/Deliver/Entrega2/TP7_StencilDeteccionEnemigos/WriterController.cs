@@ -15,6 +15,12 @@ public class WriterController : MonoBehaviour
     {
         ChangeWriterSize();
     }
+    public void SetWriterSize(float newSize)
+    {
+        Debug.Log("nuevo tamaño: " + newSize);
+        writerSize = newSize;
+        ChangeWriterSize();
+    }
     void ChangeWriterSize()
     {
         foreach (var writer in writerObjects)
