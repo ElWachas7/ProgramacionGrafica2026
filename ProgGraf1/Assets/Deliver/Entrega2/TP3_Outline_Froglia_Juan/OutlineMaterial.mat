@@ -7,29 +7,23 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Egg
-  m_Shader: {fileID: 4800000, guid: 1c48d851e158e5e4ba46768389fcd056, type: 3}
+  m_Name: OutlineMaterial
+  m_Shader: {fileID: 4800000, guid: cd46b824eb737e44fad4e5469303ce61, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 2001
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _Texture:
-        m_Texture: {fileID: 2800000, guid: db04748e46ff14546842b247f90f3cf0, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _texcoord:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _OutlineWidth: 1
+    - _Width: 0.196
     - __dirty: 0
     m_Colors: []
   m_BuildTextureStacks: []
