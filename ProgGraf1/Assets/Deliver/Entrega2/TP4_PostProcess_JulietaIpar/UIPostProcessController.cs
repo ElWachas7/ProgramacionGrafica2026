@@ -10,6 +10,11 @@ public class UIPostProcessController : MonoBehaviour
     [SerializeField] private Shader flashbangShader;
     [SerializeField] private Shader drunkShader;
 
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     public void SetCameraShader()
     {
         myPostPro.SetShader(cameraShader);
