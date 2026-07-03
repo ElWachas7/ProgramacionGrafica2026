@@ -51,7 +51,7 @@ EditorBuildSettings:
     path: Assets/Deliver/Entrega2/TP5_Sprites/Sprites_Water.unity
     guid: 73bfc142576c977499cbe7a9cd7ed7a8
   - enabled: 1
-    path: Assets/Deliver/Entrega2/TP7_StencilDeteccionEnemigos/StencilDeteccionEnemigos.unity
+    path: Assets/Scenes/StencilDeteccionEnemigos.unity
     guid: 104b4b508372e9e4cbde591990833559
   - enabled: 1
     path: Assets/Deliver/Entrega2/TP8_TCGCard/TP8_TCGCard.unity
