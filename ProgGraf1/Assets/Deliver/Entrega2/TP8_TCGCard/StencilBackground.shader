@@ -1,10 +1,11 @@
 // Made with Amplify Shader Editor
 // Available at the Unity Asset Store - http://u3d.as/y3X 
-Shader "StencilPlane"
+Shader "StencilBackground"
 {
 	Properties
 	{
-		
+		_Color0("Color 0", Color) = (0,1,0.9529974,0)
+
 	}
 	
 	SubShader
@@ -20,19 +21,19 @@ Shader "StencilPlane"
 		Blend Off
 		AlphaToMask Off
 		Cull Off
-		ColorMask 0
-		ZWrite Off
-		ZTest Always
+		ColorMask RGBA
+		ZWrite On
+		ZTest LEqual
 		Offset 0 , 0
 		Stencil
 		{
 			Ref 1
-			CompFront Always
-			PassFront Replace
+			CompFront Equal
+			PassFront Keep
 			FailFront Keep
 			ZFailFront Keep
-			CompBack Always
-			PassBack Replace
+			CompBack Equal
+			PassBack Keep
 			FailBack Keep
 			ZFailBack Keep
 		}
@@ -75,7 +76,8 @@ Shader "StencilPlane"
 				UNITY_VERTEX_OUTPUT_STEREO
 			};
 
-			
+			uniform float4 _Color0;
+
 			
 			v2f vert ( appdata v )
 			{
@@ -113,7 +115,7 @@ Shader "StencilPlane"
 				#endif
 				
 				
-				finalColor = fixed4(1,1,1,1);
+				finalColor = _Color0;
 				return finalColor;
 			}
 			ENDCG
@@ -125,7 +127,9 @@ Shader "StencilPlane"
 }
 /*ASEBEGIN
 Version=18900
-184;73;1280;591;640;350;1;True;True
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;0,0;Float;False;True;-1;2;ASEMaterialInspector;100;1;StencilPlane;0770190933193b94aaa3065e307002fa;True;Unlit;0;0;Unlit;2;False;True;0;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;True;0;False;-1;0;False;-1;False;False;False;False;False;False;False;False;False;True;0;False;-1;True;True;2;False;-1;True;True;False;False;False;False;0;False;-1;False;False;False;False;False;False;True;True;True;1;False;-1;255;False;-1;255;False;-1;7;False;-1;3;False;-1;1;False;-1;1;False;-1;7;False;-1;3;False;-1;1;False;-1;1;False;-1;True;True;2;False;-1;True;7;False;-1;True;True;0;False;-1;0;False;-1;True;1;RenderType=Opaque=RenderType;True;2;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=ForwardBase;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;1;True;False;;False;0
+184;73;1280;591;638.2305;238.1973;1;True;True
+Node;AmplifyShaderEditor.ColorNode;1;-304.8565,-38.51541;Inherit;False;Property;_Color0;Color 0;0;0;Create;True;0;0;0;False;0;False;0,1,0.9529974,0;0.245105,0.450903,0.6415094,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;2;0,0;Float;False;True;-1;2;ASEMaterialInspector;100;1;StencilBackground;0770190933193b94aaa3065e307002fa;True;Unlit;0;0;Unlit;2;False;True;0;1;False;-1;0;False;-1;0;1;False;-1;0;False;-1;True;0;False;-1;0;False;-1;False;False;False;False;False;False;False;False;False;True;0;False;-1;True;True;2;False;-1;False;True;True;True;True;True;0;False;-1;False;False;False;False;False;False;True;True;True;1;False;-1;255;False;-1;255;False;-1;5;False;-1;1;False;-1;1;False;-1;1;False;-1;5;False;-1;1;False;-1;1;False;-1;1;False;-1;False;True;1;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;1;RenderType=Opaque=RenderType;True;2;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=ForwardBase;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;1;True;False;;False;0
+WireConnection;2;0;1;0
 ASEEND*/
-//CHKSM=B088D44DB6841DCB6682C63AEA03AA18B9414B78
+//CHKSM=0951C929064FF8FE86B20C7E04722A2BE8C5BF27
