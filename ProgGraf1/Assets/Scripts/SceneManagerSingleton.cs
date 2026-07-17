@@ -13,11 +13,6 @@ public class SceneManagerSingleton : MonoBehaviour
     [SerializeField] private string _scene2;
     [SerializeField] private string _scene3;
     [SerializeField] private string _scene4;
-    [SerializeField] private string _scene5;
-    [SerializeField] private string _scene7;
-    [SerializeField] private string _scene8;
-    [SerializeField] private string _scene9;
-    [SerializeField] private string _scene11;
 
     [Header("Botones del Canvas")]
     [SerializeField] private Button botonAnterior;
@@ -36,7 +31,7 @@ public class SceneManagerSingleton : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        _scenes = new string[] { _scene8, _scene1, _scene2, _scene3, _scene4, _scene5, _scene7, _scene9, _scene11 };
+        _scenes = new string[] { _scene1, _scene2, _scene3, _scene4};
     }
 
     /*private void Start()
