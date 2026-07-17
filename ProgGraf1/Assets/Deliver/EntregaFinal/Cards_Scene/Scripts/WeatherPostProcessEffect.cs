@@ -10,7 +10,9 @@ public class WeatherPostProcessEffect : MonoBehaviour
 
     [Header("Sunny Settings")]
     [SerializeField] private Color sunnyColor = Color.white;
-    [SerializeField] private Color rayColor = new Color(1f, 0.95f, 0.7f);
+    [SerializeField]
+    private Color rayColor =
+        new Color(1f, 0.95f, 0.7f);
 
     [SerializeField, Range(0.5f, 2f)]
     private float sunnyBrightness = 1.1f;
@@ -24,33 +26,50 @@ public class WeatherPostProcessEffect : MonoBehaviour
     [SerializeField, Range(1f, 20f)]
     private float rayFrequency = 15f;
 
+    [Header("Rainy Settings")]
+    [SerializeField] private Texture2D rainTexture;
+    [SerializeField] private Color rainyColor = Color.white;
+
+    [SerializeField, Range(0.5f, 2f)]
+    private float rainyBrightness = 1.1f;
+
+    [SerializeField, Range(0f, 5f)]
+    private float rainSpeed = 2.5f;
+
+    [Header("Snowy Settings")]
+    [SerializeField] private Texture2D snowTexture;
+    [SerializeField] private Color snowyColor = Color.white;
+
+    [SerializeField, Range(0.5f, 2f)]
+    private float snowyBrightness = 1.1f;
+
+    [SerializeField, Range(0f, 2f)]
+    private float snowSpeed = 0.5f;
+
     private Material sunnyMaterial;
     private Material rainyMaterial;
     private Material snowyMaterial;
 
-    [Header("Rainy Settings")]
-    [SerializeField] private Color rainyColor = Color.white;
-    [SerializeField, Range(0.5f, 2f)]
-    private float rainyBrightness = 1.1f;
-    [SerializeField, Range(2f, 3f)]
-    private float rainSpeed = 2.5f;
-
-    [Header("Snowy Settings")]
-    [SerializeField] private Color snowyColor = Color.white;
-    [SerializeField, Range(0.5f, 2f)]
-    private float snowyBrightness = 1.1f;
-    [SerializeField, Range(0f, 2f)]
-    private float snowSpeed = 0.5f;
     private void Awake()
     {
         if (sunnyShader != null)
+        {
             sunnyMaterial = new Material(sunnyShader);
+        }
 
         if (rainyShader != null)
+        {
             rainyMaterial = new Material(rainyShader);
+        }
 
         if (snowyShader != null)
+        {
             snowyMaterial = new Material(snowyShader);
+        }
+
+        UpdateSunnyProperties();
+        UpdateRainyProperties();
+        UpdateSnowyProperties();
     }
 
     private void Update()
@@ -72,22 +91,32 @@ public class WeatherPostProcessEffect : MonoBehaviour
         sunnyMaterial.SetFloat("_RaySpeed", raySpeed);
         sunnyMaterial.SetFloat("_RayFrequency", rayFrequency);
     }
+
     private void UpdateRainyProperties()
     {
         if (rainyMaterial == null)
             return;
 
+        rainyMaterial.SetTexture("_RainTexture", rainTexture);
         rainyMaterial.SetColor("_RainyColor", rainyColor);
-        rainyMaterial.SetFloat("_RainyBrightness", rainyBrightness);
+        rainyMaterial.SetFloat(
+            "_RainyBrightness",
+            rainyBrightness
+        );
         rainyMaterial.SetFloat("_RainSpeed", rainSpeed);
     }
+
     private void UpdateSnowyProperties()
     {
-        if (rainyMaterial == null)
+        if (snowyMaterial == null)
             return;
 
+        snowyMaterial.SetTexture("_SnowTexture", snowTexture);
         snowyMaterial.SetColor("_SnowColor", snowyColor);
-        snowyMaterial.SetFloat("_SnowyBrightness", snowyBrightness);
+        snowyMaterial.SetFloat(
+            "_SnowyBrightness",
+            snowyBrightness
+        );
         snowyMaterial.SetFloat("_SnowSpeed", snowSpeed);
     }
 
@@ -99,7 +128,11 @@ public class WeatherPostProcessEffect : MonoBehaviour
 
         if (currentMaterial != null)
         {
-            Graphics.Blit(source, destination, currentMaterial);
+            Graphics.Blit(
+                source,
+                destination,
+                currentMaterial
+            );
         }
         else
         {

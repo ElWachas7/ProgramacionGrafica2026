@@ -473,9 +473,11 @@ MonoBehaviour:
   rayIntensity: 0.8
   raySpeed: 2
   rayFrequency: 20
+  rainTexture: {fileID: 2800000, guid: 9230fccda3d9747448f776afe97192a1, type: 3}
   rainyColor: {r: 0.42386082, g: 0.5467287, b: 0.7075472, a: 1}
   rainyBrightness: 1.1
   rainSpeed: 2.5
+  snowTexture: {fileID: 2800000, guid: e413796978815dd4fa9635aa87213485, type: 3}
   snowyColor: {r: 0.18022428, g: 0.22763267, b: 0.4716981, a: 1}
   snowyBrightness: 1.1
   snowSpeed: 0.5
