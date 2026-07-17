@@ -54,7 +54,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StencilDeteccionEnemigos.unity
     guid: 104b4b508372e9e4cbde591990833559
   - enabled: 1
-    path: Assets/Deliver/Entrega2/TP8_TCGCard/TP8_TCGCard.unity
+    path: Assets/Deliver/EntregaFinal/Cards_Scene/Final_Cartas.unity
     guid: d6b33b49b7a8d3b4c91334062e627591
   - enabled: 1
     path: Assets/Deliver/Entrega2/TP9_Projector_FranciscoGeddes/TP9-Parcial2.unity
