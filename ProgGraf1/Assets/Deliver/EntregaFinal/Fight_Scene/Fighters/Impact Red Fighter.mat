@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Impact VFX
+  m_Name: Impact Red Fighter
   m_Shader: {fileID: 4800000, guid: 739d9033945fb5b459c01f2ba5b62731, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -30,6 +30,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Cutoff: 0.28
+    - _Transparency: 3.21
     - __dirty: 0
-    m_Colors: []
+    - _intensity: 12
+    m_Colors:
+    - _Color0: {r: 5.723608, g: 0.80803883, b: 0, a: 0}
   m_BuildTextureStacks: []

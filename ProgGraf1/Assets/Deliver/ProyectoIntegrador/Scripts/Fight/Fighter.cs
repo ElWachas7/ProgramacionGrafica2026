@@ -8,6 +8,8 @@ public class Fighter : MonoBehaviour
 {
    [SerializeField] private List<float> delays  = new List<float>(); 
    [SerializeField] private List<UnityEvent> events  = new List<UnityEvent>();
+
+   [SerializeField] private ParticleSystem hitParticle;
    
    private int currentIndex;
    private Animator animator;
@@ -30,6 +32,8 @@ public class Fighter : MonoBehaviour
       animator.SetInteger("index", currentIndex);
       animator.SetTrigger("triggerAnim");
       events[currentIndex].Invoke();
+      yield return new WaitForSeconds(0.8f);
+      hitParticle.Play();
    }
 
 }
