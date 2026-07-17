@@ -35,34 +35,34 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Street.unity
     guid: 0da0f79b971fdc94c8587763574b0c76
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SimpleNaturePack_Demo.unity
     guid: 5e7af4bd95ac53a4cb784a9eedf8f6f9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Wall.unity
     guid: 3e2c3271ef438604397890646e774b8f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TP3_Outline.unity
     guid: 47b8cbd7f202ff649bbc2c215a89ef2d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TP4_PostProcess.unity
     guid: 0bbe0624ea789e647b17dd8948abaa93
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sprites_Water.unity
     guid: 73bfc142576c977499cbe7a9cd7ed7a8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StencilDeteccionEnemigos.unity
     guid: 104b4b508372e9e4cbde591990833559
-  - enabled: 1
+  - enabled: 0
     path: Assets/Deliver/Entrega2/TP8_TCGCard/TCG_Card.unity
     guid: d6b33b49b7a8d3b4c91334062e627591
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TP9-Parcial2.unity
     guid: a9231e7e19f100e47ab65575c934790f
   - enabled: 0
     path: Assets/Scenes/Persiana.unity
     guid: 4106f776faf3fc64bafe4f844ae075ca
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ScifiProjector.unity
     guid: bd2eaa65f5d7c2041b44587e381b1197
   - enabled: 1
