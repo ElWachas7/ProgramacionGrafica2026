@@ -9,11 +9,22 @@ public class ShieldScript : MonoBehaviour
     [SerializeField] float _DisplacementMagnitude;
     [SerializeField] float _LerpSpeed;
     [SerializeField] float _DisolveSpeed;
+
+    [Header("Configuración de Colores")]
+    [SerializeField] Color[] _shieldColors = new Color[3];
+    private int _currentColorIndex = 0;
+
     bool _shieldOn;
     Coroutine _disolveCoroutine;
+    Coroutine _hitCoroutine; 
+
     void Start()
     {
         _renderer = GetComponent<Renderer>();
+        if (_shieldColors.Length > 0)
+        {
+            _renderer.material.SetColor("_shieldColor", _shieldColors[0]);
+        }
     }
 
     void Update()
@@ -36,17 +47,32 @@ public class ShieldScript : MonoBehaviour
     public void HitShield(Vector3 hitPos)
     {
         _renderer.material.SetVector("_hitPos", hitPos);
-        StopAllCoroutines();
-        StartCoroutine(Coroutine_HitDisplacement());
+
+        _currentColorIndex++;
+        if (_currentColorIndex >= _shieldColors.Length)
+        {
+            OpenCloseShield();
+            return;
+        }
+        _renderer.material.SetColor("_shieldColor", _shieldColors[_currentColorIndex]);
+
+        if (_hitCoroutine != null) StopCoroutine(_hitCoroutine);
+        _hitCoroutine = StartCoroutine(Coroutine_HitDisplacement());
     }
 
     public void OpenCloseShield()
     {
         float target = 2f;
 
-        if (_shieldOn)
+        if (!_shieldOn)
         {
             target = -1f;
+
+            _currentColorIndex = 0;
+            if (_shieldColors.Length > 0)
+            {
+                _renderer.material.SetColor("_shieldColor", _shieldColors[0]);
+            }
         }
 
         _shieldOn = !_shieldOn;
@@ -61,26 +87,22 @@ public class ShieldScript : MonoBehaviour
     IEnumerator Coroutine_HitDisplacement()
     {
         float lerp = 0;
+        float valorInicial = 0f;
+        float valorMaximo = _DisplacementMagnitude;
 
         while (lerp < 1)
         {
-            _renderer.material.SetFloat("_displacementStrenght", _DisplacementCurve.Evaluate(lerp) * _DisplacementMagnitude);
+            float tiempoCurva = Mathf.Clamp01(lerp);
+            float factorInterpolacion = _DisplacementCurve.Evaluate(tiempoCurva);
+            float valorFinal = Mathf.Lerp(valorInicial, valorMaximo, factorInterpolacion);
+
+            _renderer.material.SetFloat("_displacementStrenght", valorFinal);
+
             lerp += Time.deltaTime * _LerpSpeed;
             yield return null;
         }
-        float valorActual = _renderer.material.GetFloat("_displacementStrenght");
-        float lerpRegreso = 0;
-        float velocidadRegreso = 4f;
 
-        while (lerpRegreso < 1)
-        {
-            float nuevoValor = Mathf.Lerp(valorActual, 0f, lerpRegreso);
-            _renderer.material.SetFloat("_displacementStrenght", nuevoValor);
-
-            lerpRegreso += Time.deltaTime * velocidadRegreso;
-            yield return null;
-        }
-        _renderer.material.SetFloat("_displacementStrenght", 0f);
+        _renderer.material.SetFloat("_displacementStrenght", valorInicial);
     }
 
     IEnumerator Coroutine_DisolveShield(float target)
@@ -97,5 +119,4 @@ public class ShieldScript : MonoBehaviour
             yield return null;
         }
     }
-
 }
