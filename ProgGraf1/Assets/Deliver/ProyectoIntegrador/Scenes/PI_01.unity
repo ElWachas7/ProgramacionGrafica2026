@@ -344,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407671658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.56, z: -6.02}
+  m_LocalPosition: {x: 0, y: 1.01, z: -1.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -454,6 +454,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &623169664 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 685648941720805096, guid: e2dc9d60e81b72844bffd7c8079dfc64, type: 3}
+  m_PrefabInstance: {fileID: 72501643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &651795718
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 849037787847517067, guid: 0ec12001a5ab00349a39435dbb77ee26, type: 3}
       propertyPath: looping
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 849037787847517067, guid: 0ec12001a5ab00349a39435dbb77ee26, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec12001a5ab00349a39435dbb77ee26, type: 3}
@@ -616,11 +625,16 @@ MonoBehaviour:
       m_Calls: []
   - m_PersistentCalls:
       m_Calls: []
-  hitParticle: {fileID: 0}
+  hitParticle: {fileID: 1788663015}
 --- !u!4 &1282980613 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: ae6041c0c33285c43b4f806225c736b0, type: 3}
   m_PrefabInstance: {fileID: 306369791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1788663015 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 849037787847517067, guid: 0ec12001a5ab00349a39435dbb77ee26, type: 3}
+  m_PrefabInstance: {fileID: 1015145623}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1882691779
 PrefabInstance:
@@ -1333,19 +1347,7 @@ MonoBehaviour:
   - 0
   events:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1971989550}
-        m_TargetAssemblyTypeName: Fighter, Assembly-CSharp
-        m_MethodName: PlayImpactVFX
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
@@ -1354,7 +1356,7 @@ MonoBehaviour:
       m_Calls: []
   - m_PersistentCalls:
       m_Calls: []
-  hitParticle: {fileID: 0}
+  hitParticle: {fileID: 623169664}
 --- !u!95 &1971989551
 Animator:
   serializedVersion: 5
