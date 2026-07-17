@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StencilPlane
-  m_Shader: {fileID: 4800000, guid: 999db3d7d15efe040b46e0b7a0faa18f, type: 3}
+  m_Name: Rainbackground
+  m_Shader: {fileID: 4800000, guid: 9f3bdfa602b53ad48901402a119224ef, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 1999
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -23,5 +23,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Color0: {r: 0.24510503, g: 0.450903, b: 0.6415094, a: 1}
+    - _Color0: {r: 0, g: 0.024016326, b: 0.5471698, a: 0}
   m_BuildTextureStacks: []
