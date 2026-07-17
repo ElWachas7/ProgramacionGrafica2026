@@ -36,8 +36,8 @@ Material:
     m_Floats:
     - _AlphaCutoff: 0.5
     - _SpinSpeed: 1
-    - _SpiralStepMax: 2
-    - _SpiralStepMin: 0.599
+    - _SpiralStepMax: 1
+    - _SpiralStepMin: 0
     - _TwirldStrenght: 10
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
