@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IntersectionEffect
+  m_Shader: {fileID: 4800000, guid: ca0b45db5d90f9148b81b3eb56de64a8, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 8c860046de06a2c4ebe54b0149e12fa9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _EmissionIntensity: 7
+    - _EmissionIntensity2: 2
+    - _Float0: 3
+    - _Float1: 30
+    - _Float2: 3
+    - _Float3: 1
+    - _NoiseScale: 23.8
+    - _PowerValue: 20
+    - _RippleSpeed: 1.7
+    - _RippleTime: -0.1
+    - _WaveCount: 20
+    - _WaveSpeed: 7.64
+    - __dirty: 0
+    m_Colors:
+    - _Color0: {r: 0.8537736, g: 1, b: 0.9629161, a: 0}
+    - _ImpactUV: {r: 0.4, g: 0.5, b: 0, a: 0}
+    - _ScreenColour: {r: 0.5058824, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
