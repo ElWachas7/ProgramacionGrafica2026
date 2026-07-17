@@ -25,5 +25,5 @@ Material:
     - _depthOffset: -1.89
     - _fresnelPow: 3.29
     m_Colors:
-    - _ShieldColor: {r: 0.1422509, g: 1, b: 0, a: 0}
+    - _ShieldColor: {r: 0, g: 0.88305783, b: 1, a: 0}
   m_BuildTextureStacks: []

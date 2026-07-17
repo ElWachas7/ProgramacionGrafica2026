@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BuubleShiel
+  m_Shader: {fileID: 4800000, guid: 5bffafcf92a22a24ebfcf0848115bf8f, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2001
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Float1: 0
+    - _Float2: 0.2763902
+    - _SpinSpeed: 1.24
+    - _SpinSpeed1: 1
+    - _SpiralStepMax: 1
+    - _SpiralStepMax1: 2
+    - _SpiralStepMin: 0.505
+    - _SpiralStepMin1: 0.6352941
+    - _TransAmbient: 0.2
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0.1
+    - _TransScattering: 2
+    - _TransShadow: 0.9
+    - _Translucency: 1
+    - _TwirldStrenght: 5.5
+    - _TwirldStrenght1: 9.003157
+    - __dirty: 0
+    - _depthOffset: 0
+    - _depthOffset1: 0
+    - _disolve: -1
+    - _disolve1: 0.5730416
+    - _disolveEdge: 0.07
+    - _disolveEdge1: 0.221288
+    - _displacementStrenght: 0
+    - _displacementStrenght1: 0.244
+    - _fresnelPow: 2.42
+    - _fresnelPow1: 0
+    - _hardness: 0
+    - _hardness1: 1
+    - _hardness2: 0.276
+    - _radius: 3.6
+    - _radius1: 2.4
+    - _radius2: 0
+    - _zoom: 0.33
+    - _zoom1: -0.42
+    m_Colors:
+    - _Color0: {r: 0, g: 0, b: 0, a: 0}
+    - _ObjScreenPos: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _ObjScreenPos1: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _ShieldColor: {r: 0, g: 0.58571386, b: 1, a: 0}
+    - _ShieldColor1: {r: 0.19975968, g: 0.61548865, b: 0.6320754, a: 1}
+    - _TwirlCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _TwirlCenter1: {r: 0, g: 0, b: 0, a: 0}
+    - _hitPos: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _hitPos1: {r: 0.07, g: 1.58, b: 1.46, a: 0}
+    - _hitPos2: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

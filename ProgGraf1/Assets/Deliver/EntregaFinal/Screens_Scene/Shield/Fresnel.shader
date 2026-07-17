@@ -145,31 +145,31 @@ Shader "Fresnel"
 }
 /*ASEBEGIN
 Version=18900
-0;546;1547;453;1038.982;194.5104;1;True;False
+0;675;1547;324;1684.602;211.3732;1.6;True;False
 Node;AmplifyShaderEditor.ScreenDepthNode;6;-912.2896,275.6096;Inherit;False;0;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.DynamicAppendNode;11;-694.7531,208.8737;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
 Node;AmplifyShaderEditor.RangedFloatNode;12;-729.7532,352.8737;Inherit;False;Property;_depthOffset;_depthOffset;1;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;5;-777.5,92;Inherit;False;Property;_fresnelPow;_fresnelPow;0;0;Create;True;0;0;0;False;0;False;0;0;0;5;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SimpleSubtractOpNode;7;-500.29,208.6096;Inherit;False;2;0;FLOAT4;0,0,0,0;False;1;FLOAT;0;False;1;FLOAT4;0
-Node;AmplifyShaderEditor.FresnelNode;1;-473.5,-1;Inherit;False;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;5;-833.7293,122.6707;Inherit;False;Property;_fresnelPow;_fresnelPow;0;0;Create;True;0;0;0;False;0;False;0;0;0;5;0;1;FLOAT;0
 Node;AmplifyShaderEditor.OneMinusNode;13;-342.7531,207.8737;Inherit;False;1;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0
-Node;AmplifyShaderEditor.ColorNode;17;-456.5626,-171.401;Inherit;False;Property;_ShieldColor;Shield Color;2;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.DynamicAppendNode;4;-161.5,-72;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
+Node;AmplifyShaderEditor.FresnelNode;1;-529.7293,29.67067;Inherit;False;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;5;False;1;FLOAT;0
+Node;AmplifyShaderEditor.ColorNode;17;-518.0068,-182.244;Inherit;False;Property;_ShieldColor;Shield Color;2;0;Create;True;0;0;0;False;0;False;0,0,0,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SmoothstepOpNode;14;-177.7529,207.8737;Inherit;False;3;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;2;FLOAT4;1,0,0,0;False;1;FLOAT4;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;15;104.4114,76.87749;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0
+Node;AmplifyShaderEditor.DynamicAppendNode;4;-156.5,-141;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;15;99.29962,30.87148;Inherit;False;2;2;0;FLOAT4;0,0,0,0;False;1;FLOAT4;0,0,0,0;False;1;FLOAT4;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;0;385,-5;Float;False;True;-1;2;ASEMaterialInspector;100;1;Fresnel;0770190933193b94aaa3065e307002fa;True;Unlit;0;0;Unlit;2;True;True;2;5;False;-1;10;False;-1;0;1;False;-1;0;False;-1;True;0;False;-1;0;False;-1;False;False;False;False;False;False;False;False;False;True;0;False;-1;True;True;0;False;-1;False;True;True;True;True;True;0;False;-1;False;False;False;False;False;False;False;True;False;255;False;-1;255;False;-1;255;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;7;False;-1;1;False;-1;1;False;-1;1;False;-1;True;True;2;False;-1;True;3;False;-1;True;True;0;False;-1;0;False;-1;True;1;RenderType=Transparent=RenderType;True;2;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=ForwardBase;False;0;;0;0;Standard;1;Vertex Position,InvertActionOnDeselection;1;0;1;True;False;;False;0
 WireConnection;11;3;6;0
 WireConnection;7;0;11;0
 WireConnection;7;1;12;0
-WireConnection;1;3;5;0
 WireConnection;13;0;7;0
+WireConnection;1;3;5;0
+WireConnection;14;0;13;0
 WireConnection;4;0;17;1
 WireConnection;4;1;17;2
 WireConnection;4;2;17;3
 WireConnection;4;3;1;0
-WireConnection;14;0;13;0
 WireConnection;15;0;4;0
 WireConnection;15;1;14;0
 WireConnection;0;0;15;0
 ASEEND*/
-//CHKSM=48EF151C8546CBB49AC3FE3AC0056294CE8429C5
+//CHKSM=F04622CC7B621E4EBA0AF234D8286DF271DB58A3

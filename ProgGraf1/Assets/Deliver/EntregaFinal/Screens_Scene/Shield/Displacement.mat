@@ -22,9 +22,9 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _displacementStrenght: 0.815
-    - _hardness: 0.616
-    - _radius: 4.5
+    - _displacementStrenght: 0.637
+    - _hardness: 0.509
+    - _radius: 3
     m_Colors:
     - _hitPos: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

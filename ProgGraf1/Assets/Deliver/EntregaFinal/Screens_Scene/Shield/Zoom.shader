@@ -142,7 +142,7 @@ Shader "Zoom"
 }
 /*ASEBEGIN
 Version=18900
-0;546;1547;453;3251.959;518.0376;2.48676;True;False
+0;536;1547;463;3208.226;801.8797;2.490984;True;False
 Node;AmplifyShaderEditor.Vector3Node;28;-1998.075,-12.90858;Inherit;False;Property;_hitPos;_hitPos;3;0;Create;True;0;0;0;False;0;False;0.5,0.5,0.5;0.5,0.5,0.5;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.WorldPosInputsNode;27;-2029.075,-201.9081;Inherit;True;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.RangedFloatNode;31;-1797.867,36.65656;Inherit;False;Property;_radius;_radius;4;0;Create;True;0;0;0;False;0;False;0;0;0;15;0;1;FLOAT;0
@@ -151,8 +151,8 @@ Node;AmplifyShaderEditor.SimpleDivideOpNode;30;-1602.867,-113.3434;Inherit;False
 Node;AmplifyShaderEditor.OneMinusNode;32;-1483.867,-113.3434;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.SaturateNode;33;-1341.867,-113.3434;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;42;-1499.803,-10.86555;Inherit;False;Property;_hardness;_hardness;2;0;Create;True;0;0;0;False;0;False;0.2763902;0;0;1;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;12;-1167.476,117.016;Inherit;False;Property;_zoom;zoom;0;0;Create;True;0;0;0;False;0;False;0;0;-1;0.5;0;1;FLOAT;0
 Node;AmplifyShaderEditor.SmoothstepOpNode;41;-1180.611,-28.79223;Inherit;False;3;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;12;-1167.476,117.016;Inherit;False;Property;_zoom;zoom;0;0;Create;True;0;0;0;False;0;False;0;0;-1;0.5;0;1;FLOAT;0
 Node;AmplifyShaderEditor.ScreenPosInputsNode;9;-857.7549,-125.7383;Float;False;0;False;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;43;-926.1003,78.57079;Inherit;False;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.OneMinusNode;21;-683.7549,50.26167;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
@@ -185,4 +185,4 @@ WireConnection;20;1;24;0
 WireConnection;7;0;20;0
 WireConnection;6;0;7;0
 ASEEND*/
-//CHKSM=17AD8C47CDD97EA805AD899F5DEA10C1BEC002A6
+//CHKSM=02AE1BC5D0BA526DB4BDA18EE85525EE8EE0A0CE
