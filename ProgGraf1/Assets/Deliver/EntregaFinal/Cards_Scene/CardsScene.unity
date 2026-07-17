@@ -142,6 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weatherState: 2
   selectedPos: {fileID: 546036698}
+  moveSpeed: 8
+  hoverHeight: 0.35
+  rotationSmoothness: 8
+  maxHorizontalAngle: 3
+  maxVerticalAngle: 2
 --- !u!65 &133056462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -594,6 +599,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weatherState: 1
   selectedPos: {fileID: 1013273113}
+  moveSpeed: 8
+  hoverHeight: 0.35
+  rotationSmoothness: 8
+  maxHorizontalAngle: 3
+  maxVerticalAngle: 2
 --- !u!65 &1596457190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -639,6 +649,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weatherState: 3
   selectedPos: {fileID: 1017887016}
+  moveSpeed: 8
+  hoverHeight: 0.35
+  rotationSmoothness: 8
+  maxHorizontalAngle: 3
+  maxVerticalAngle: 2
 --- !u!1001 &1723283721265748485
 PrefabInstance:
   m_ObjectHideFlags: 0
