@@ -7,17 +7,22 @@ public class WeatherCard : MonoBehaviour
 
     [Header("Movimiento")]
     [SerializeField] private Transform selectedPos;
-    [SerializeField] private float moveSpeed = 8f;
+    private float moveSpeed = 8f;
+
+    [Header("Hover")]
+    private float hoverHeight = 0.35f;
 
     [Header("Rotación")]
-    [SerializeField] private float rotationSmoothness = 8f;
-    [SerializeField] private float sensitivity = 20f;
-    [SerializeField] private float maxHorizontalAngle = 20f;
-    [SerializeField] private float maxVerticalAngle = 15f;
+    private float rotationSmoothness = 8f;
+    private float sensitivity = 5f;
+    private float maxHorizontalAngle = 3f;
+    private float maxVerticalAngle = 2f;
 
     private Vector3 initialLocalPosition;
     private Quaternion initialLocalRotation;
+
     private bool isSelected;
+    private bool isHovered;
 
     public WeatherManager.WeatherState WeatherState => weatherState;
 
@@ -29,16 +34,38 @@ public class WeatherCard : MonoBehaviour
 
     private void Update()
     {
-        Vector3 targetPosition = isSelected && selectedPos != null
-            ? selectedPos.localPosition
-            : initialLocalPosition;
+        UpdatePosition();
+        UpdateRotation();
+
+        if (Input.GetKeyDown(KeyCode.R) && isSelected)
+        {
+            WeatherManager.Instance.ClearSelection();
+        }
+    }
+
+    private void UpdatePosition()
+    {
+        Vector3 targetPosition = initialLocalPosition;
+
+        if (isHovered)
+        {
+            targetPosition += Vector3.up * hoverHeight;
+        }
+
+        if (isSelected && selectedPos != null)
+        {
+            targetPosition = selectedPos.localPosition;
+        }
 
         transform.localPosition = Vector3.Lerp(
             transform.localPosition,
             targetPosition,
             moveSpeed * Time.deltaTime
         );
+    }
 
+    private void UpdateRotation()
+    {
         if (isSelected)
         {
             RotateCard();
@@ -48,19 +75,15 @@ public class WeatherCard : MonoBehaviour
             transform.localRotation = Quaternion.Slerp(
                 transform.localRotation,
                 initialLocalRotation,
-                moveSpeed * Time.deltaTime
+                rotationSmoothness * Time.deltaTime
             );
-        }
-
-        if (Input.GetKeyDown(KeyCode.R) && isSelected)
-        {
-            WeatherManager.Instance.ClearSelection();
         }
     }
 
     public void Select()
     {
         isSelected = true;
+        isHovered = false;
     }
 
     public void Deselect()
@@ -68,13 +91,23 @@ public class WeatherCard : MonoBehaviour
         isSelected = false;
     }
 
+    private void OnMouseEnter()
+    {
+        if (!isSelected)
+        {
+            isHovered = true;
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        isHovered = false;
+    }
+
     private void RotateCard()
     {
-        float mouseX =
-            (Input.mousePosition.x / Screen.width - 0.5f) * 2f;
-
-        float mouseY =
-            (Input.mousePosition.y / Screen.height - 0.5f) * 2f;
+        float mouseX = (Input.mousePosition.x / Screen.width - 0.5f) * 2f;
+        float mouseY = (Input.mousePosition.y / Screen.height - 0.5f) * 2f;
 
         float targetY = Mathf.Clamp(
             mouseX * sensitivity,

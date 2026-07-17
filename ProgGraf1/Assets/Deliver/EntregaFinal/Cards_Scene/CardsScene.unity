@@ -142,11 +142,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weatherState: 2
   selectedPos: {fileID: 546036698}
-  moveSpeed: 8
-  rotationSmoothness: 8
-  sensitivity: 5
-  maxHorizontalAngle: 3
-  maxVerticalAngle: 2
 --- !u!65 &133056462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -408,8 +403,8 @@ Camera:
   m_GameObject: {fileID: 1356654901}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.65850836, g: 0.76196057, b: 0.9245283, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -597,11 +592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weatherState: 1
   selectedPos: {fileID: 1013273113}
-  moveSpeed: 8
-  rotationSmoothness: 8
-  sensitivity: 5
-  maxHorizontalAngle: 3
-  maxVerticalAngle: 2
 --- !u!65 &1596457190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -647,11 +637,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weatherState: 3
   selectedPos: {fileID: 1017887016}
-  moveSpeed: 8
-  rotationSmoothness: 8
-  sensitivity: 5
-  maxHorizontalAngle: 2
-  maxVerticalAngle: 2
 --- !u!1001 &1723283721265748485
 PrefabInstance:
   m_ObjectHideFlags: 0
