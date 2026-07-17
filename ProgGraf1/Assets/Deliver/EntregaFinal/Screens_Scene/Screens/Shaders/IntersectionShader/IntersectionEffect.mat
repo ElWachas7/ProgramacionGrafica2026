@@ -38,8 +38,10 @@ Material:
     - _Float3: 1
     - _NoiseScale: 23.8
     - _PowerValue: 20
+    - _RippleEmissionIntensity: 1
     - _RippleSpeed: 1.7
     - _RippleTime: -0.1
+    - _ScreenEmissionIntensity: 5.44
     - _WaveCount: 20
     - _WaveSpeed: 7.64
     - __dirty: 0
