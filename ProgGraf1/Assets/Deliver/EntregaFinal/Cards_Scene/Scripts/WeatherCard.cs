@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class WeatherCard : MonoBehaviour
 {
-    [Header("Clima de esta carta")]
+    [Header("Weather")]
     [SerializeField] private WeatherManager.WeatherState weatherState;
 
-    [Header("Movimiento")]
+    [Header("Movement")]
     [SerializeField] private Transform selectedPos;
-    private float moveSpeed = 8f;
+    [SerializeField, Range(4f, 8f)] private float moveSpeed = 8f;
 
     [Header("Hover")]
-    private float hoverHeight = 0.35f;
+    [SerializeField, Range(0.1f, 0.5f)] private float hoverHeight = 0.35f;
 
-    [Header("Rotación")]
-    private float rotationSmoothness = 8f;
+    [Header("Rotation")]
+    [SerializeField, Range(0.5f, 8f)] private float rotationSmoothness = 8f;
     private float sensitivity = 5f;
+    [SerializeField, Range(1f, 3f)]
     private float maxHorizontalAngle = 3f;
+    [SerializeField, Range(1f, 3f)]
     private float maxVerticalAngle = 2f;
 
     private Vector3 initialLocalPosition;
