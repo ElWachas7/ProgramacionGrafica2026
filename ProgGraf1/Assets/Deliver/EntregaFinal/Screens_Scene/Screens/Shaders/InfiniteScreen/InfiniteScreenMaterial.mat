@@ -50,20 +50,27 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _EmissionIntensity1: 5
     - _Float0: 2.41
     - _Float1: 33.18
+    - _InfiniteScreenIntensity: 1.5
     - _NoiseForce: 119.63
     - _NoiseScale: 9.5
+    - _NoiseScale1: 12.97
     - _RGB_Offset: 0.1
     - _RGB_Offset1: 0.01
     - _RotationSpeed: 2.47
     - _SinStrengthReducer: 0.01
     - _SinTimeSpeed: 7.66
     - _TransitionSpeed: 3.89
+    - _WaveCount1: 16.78
+    - _WaveSpeed1: 15
     - _WavesAmount: 24.5
     - _Zoom: 1
     - _ZoomSpeed: 1.9
     - __dirty: 0
     m_Colors:
+    - _InfiniteScreenColour: {r: 1, g: 1, b: 1, a: 0}
+    - _ScreenColour1: {r: 1, g: 1, b: 1, a: 0}
     - _ZoomValues: {r: -1, g: 1, b: 0.1, a: 0.88}
   m_BuildTextureStacks: []

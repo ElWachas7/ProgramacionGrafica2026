@@ -317,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267162676}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.35, y: 13.020572, z: -21.44}
+  m_LocalPosition: {x: -4.35, y: 13.020572, z: -16.89}
   m_LocalScale: {x: 4.24, y: 4.24, z: 4.24}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -554,9 +554,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: dbbb679fb89de2743a69a44ac7d03e33, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dbbb679fb89de2743a69a44ac7d03e33, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 30b156db7a4d6134580c09fccaf854ee, type: 2}
+      objectReference: {fileID: 2100000, guid: ff708aedea369c8498936876be029059, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dbbb679fb89de2743a69a44ac7d03e33, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 86122c7bc8ad170499496929ae85002b, type: 2}
     - target: {fileID: 919132149155446097, guid: dbbb679fb89de2743a69a44ac7d03e33, type: 3}
       propertyPath: m_Name
       value: screenTV
@@ -593,6 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a18ede79941c440a599246f6c91ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ringDuration: 0.5
 --- !u!54 &1928085690
 Rigidbody:
   m_ObjectHideFlags: 0
