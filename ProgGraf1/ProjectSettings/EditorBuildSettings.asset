@@ -69,10 +69,10 @@ EditorBuildSettings:
     path: Assets/Deliver/EntregaFinal/Screens_Scene/ScreensScene.unity
     guid: 6dab4f069947a9b429670e499b2a81b2
   - enabled: 1
-    path: Assets/Deliver/ProyectoIntegrador/Scenes/PI_06.unity
+    path: Assets/Deliver/EntregaFinal/Fight_Scene/PI_06.unity
     guid: 87eb01bc4611f0b4699cf13c14ebc636
   - enabled: 1
-    path: Assets/Deliver/ProyectoIntegrador/Scenes/PI_01.unity
+    path: Assets/Deliver/EntregaFinal/Fight_Scene/PI_01.unity
     guid: 23ea3345bdd97d047834ff36496be8bc
   - enabled: 1
     path: Assets/Deliver/EntregaFinal/Cards_Scene/CardsScene.unity
